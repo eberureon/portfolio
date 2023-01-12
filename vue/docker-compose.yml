@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  nuxt:
+    container_name: portfolio-nuxt
+    build: .
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - NUXT_HOST=${NUXT_HOST}
+      - NUXT_PORT=${NUXT_PORT}
+    command:
+      "npm run start"
+
+  app:
+    image: nginx:stable-alpine
+    container_name: portfolio-app
+    restart: always
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./nginx:/etc/nginx
+    healthcheck:
+      test:  wget -q -t 1 --spider http://localhost || exit 1
+      interval: 30m
+      timeout: 3s
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '5'
+        max-size: '10m'
+    depends_on:
+      - nuxt
+    networks:
+      - default
+      - nginx-proxy_default
+
+networks:
+  nginx-proxy_default:
+    external: true

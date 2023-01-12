@@ -1,0 +1,36 @@
+$skills-pictures: agile,
+  bootstrap,
+  css,
+  docker,
+  html,
+  javascript,
+  reactjs,
+  tux,
+  less,
+  nodejs,
+  sass,
+  scrum,
+  sql,
+  vuejs;
+$skills-bg-size: 100%, // Agile
+  60%,  // Bootstrap
+  50%,  // CSS
+  90%,  // Docker
+  75%,  // HTML
+  55%,  // JavaScript
+  85%, // Reactjs
+  65%,  // Tux
+  100%, // LESS
+  85%,  // Nodejs
+  85%,  // SASS
+  125%, // Scrum
+  60%,  // SQL
+  60%; // Vuejs
+
+@mixin pic($bg-img: null, $bg-size: null) {
+  background: $bg-img no-repeat center transparent;
+  -moz-background-size: $bg-size;
+  -o-background-size: $bg-size;
+  -webkit-background-size: $bg-size;
+  background-size: $bg-size;
+}

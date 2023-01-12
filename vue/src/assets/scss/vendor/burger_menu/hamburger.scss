@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* Variables */
+/* ================================================== */
+@import '../../partials/vars';
+
+/* Types */
+/* ================================================== */
+$hamburger-types: (
+  landonfire,
+) !default;
+
+/* Base Hamburger (We need this) */
+/* ================================================== */
+@import 'base';
+
+/* Hamburger types */
+/* ================================================== */
+@import 'types/landonfire';

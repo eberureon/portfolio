@@ -1,0 +1,67 @@
+@import '../partials/vars';
+@import 'media-queries';
+
+@mixin cookie-banner {
+  background-color: $gray;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+
+  p {
+    color: $white;
+    font-size: $font-size-tiny;
+    font-weight: $light;
+    margin: 0;
+    padding: 2.2rem 0;
+    text-align: center;
+
+    @include tablet {
+      font-size: $font-size-small;
+    }
+  }
+
+  a {
+    color: $white;
+    font-weight: $light;
+  }
+}
+
+@mixin close-container {
+  cursor: pointer;
+  height: 20px;
+  margin: 13px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+
+  .close {
+    display: block;
+    height: 100%;
+    transform: translateY(-1px);
+    width: 100%;
+
+    &::before,
+    &::after {
+      background: $white;
+      border-radius: 2px;
+      content: '';
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    &::before {
+      transform: rotateZ(0.75rad);
+    }
+
+    &::after {
+      transform: rotateZ(-0.75rad);
+    }
+
+    &:hover {
+      background: $gray;
+    }
+  }
+}

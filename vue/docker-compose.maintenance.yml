@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  portfolio:
+    container_name: maintenance
+    build:
+      context: .
+      dockerfile: ./Dockerfile.maintenance
+      target: server
+    restart: always
+    volumes:
+      - data:/var/www/html:ro
+    healthcheck:
+      test:  wget -q -t 1 --spider http://localhost || exit 1
+      interval: 5m
+      timeout: 3s
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    networks:
+      - default
+      - nginx-proxy_default
+
+volumes:
+  data:
+
+networks:
+  nginx-proxy_default:
+    external: true

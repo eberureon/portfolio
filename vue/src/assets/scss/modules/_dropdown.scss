@@ -1,0 +1,34 @@
+@mixin dropdown-default {
+  -moz-transition: height 400ms ease-in-out;
+  -o-transition: height 400ms ease-in-out;
+  -webkit-transition: height 400ms ease-in-out;
+  overflow: hidden;
+  transition: height 400ms ease-in-out;
+}
+
+@mixin dropdown-btn($className) {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  + label > div {
+    cursor: pointer;
+  }
+
+  &:not(:checked) ~ .#{$className} {
+    height: 0;
+  }
+
+  &:checked ~ .#{$className} {
+    height: auto;
+  }
+
+  &:checked + label > div > h4 > svg {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
