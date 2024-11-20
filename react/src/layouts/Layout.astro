@@ -34,7 +34,9 @@ const { title } = Astro.props
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		-webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+		background: white;
 	}
 	code {
 		font-family:
@@ -46,5 +48,11 @@ const { title } = Astro.props
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	footer {
+	   bottom: 0;
+		font-size: 0.75rem;
+		position: fixed;
+		width: 100%;
 	}
 </style>
