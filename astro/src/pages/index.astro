@@ -3,6 +3,38 @@ import Layout from '../layouts/Layout.astro';
 import Sidebar from '../components/Sidebar.astro'
 ---
 
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    max-width: 1500px;
+    margin: auto;
+  }
+
+  .content {
+    color: #204b63;
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* Large desktops and high-resolution screens (1025px and up) */
+  @media (min-width: 1025px) {
+    .container {
+      /* Desktop: Sidebar + Content */
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+</style>
+
 <Layout>
-  <Sidebar />
+  <div class="container">
+    <Sidebar />
+    <div class="content">
+      <h2>Zusammenfassung</h2>
+    </div>
+  </div>
 </Layout>
