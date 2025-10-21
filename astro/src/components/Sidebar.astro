@@ -4,29 +4,44 @@
   }
 
   .sidebar {
-    background-color: blue;
+    background-color: #203b63;
   }
 
   .content {
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
+  }
+
+  .content:first-child {
+    padding-top: 2rem;
   }
   
   h1 {
-    color: orange;
+    color: #ff953f;
     font-size: 2.5rem;
     text-transform: uppercase;
   }
 
   strong {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    font-size: 1.75rem;
+  }
+
+  hr {
+    margin: 0.5rem auto;
+  }
+
+  p {
+    margin-bottom: 1rem;
   }
 
   /* Large desktops and high-resolution screens (1025px and up) */
   @media (min-width: 1025px) {
     .sidebar {
       width: 33.33333%;
-      height: 100%;
+      min-height: 100lvh;
+    }
+
+    .content:last-child {
+      padding-bottom: 0;
     }
   }
 </style>
@@ -34,7 +49,7 @@
 <div class="sidebar">
   <div class="content">
     <h1>Leon Ebel</h1>
-    <strong>Software-Entwickler</strong>
+    <strong style="text-transform: uppercase; font-size: 1.5rem;">Software-Entwickler</strong>
     <div>
       <span>München |</span>
       <a href="mailto:leon.ebel@tuta.com">E-Mail</a>
@@ -48,16 +63,18 @@
 
   <div class="content">
     <strong>Technische Expertise</strong>
-    <p><b>Programmiersprachen & Framekworks:</b> TypeScript, React.js, Node.js</p>
-    <p><b>Testing:</b>Test-Driven Development (TDD), Jest, Cypress, Playwright</p>
+    <hr />
+    <p><b>Programmiersprachen & Framekworks:</b> TypeScript, React, Next.js, Node.js, Python</p>
+    <p><b>Testing:</b> Test-Driven Development (TDD), Jest, Cypress, Playwright</p>
     <p><b>Datenbanken & APIs:</b> SQL, GraphQL, MongoDB, SQLite, PostgreSQL</p>
     <p><b>DevOps & Infrastructure:</b> Docker, AWS, Google Cloud Services, Unix, Scrum, Jira, Linear</p>
-    <p><b>Entwicklungs Tools:</b> neovim, Git, Firebase, GithubActions</p>
+    <p><b>Entwicklungs Tools:</b> neovim, Git, Firebase, Github Actions</p>
     <p><b>User Interface:</b> CSS, Tailwind, Lucide, shadcn/ui, radix/ui</p>
   </div>
 
     <div class="content">
-      <strong>Weitere Informationen:</strong>
+      <strong>Weitere Informationen</strong>
+      <hr />
       <p><b>Sprachen:</b> Deutsch (Muttersprache), Englisch (verhandlungssicher)</p>
       <p><b>Interessen:</b> Web-Entwicklung, IT-Sicherheit, Handball</p>
     </div>
