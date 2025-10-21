@@ -13,7 +13,7 @@ import Sidebar from '../components/Sidebar.astro'
   }
 
   .content {
-    color: #204b63;
+    color: #203b63;
     padding: 2rem;
   }
 
@@ -26,6 +26,12 @@ import Sidebar from '../components/Sidebar.astro'
     .container {
       /* Desktop: Sidebar + Content */
       grid-template-columns: 1fr 2fr;
+      box-shadow: 10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      padding-left: 7rem;
+      padding-right: 7rem;
     }
   }
 </style>
@@ -35,6 +41,7 @@ import Sidebar from '../components/Sidebar.astro'
     <Sidebar />
     <div class="content">
       <h2>Zusammenfassung</h2>
+      <p>Ich bin Full-Stack-Entwickler mit Fokus auf Webentwicklung. Aktuell studiere ich berufsbegleitend Informatik (mit Schwerpunkt IT-Sicherheit) an der Friedrich-Alexander-Universität in Erlangen.</p>
     </div>
   </div>
 </Layout>
