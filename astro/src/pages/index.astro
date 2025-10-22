@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Sidebar from '../components/Sidebar.astro'
+import Sidebar from '../components/Sidebar.astro';
 ---
 
 <style>
@@ -17,8 +17,52 @@ import Sidebar from '../components/Sidebar.astro'
     padding: 2rem;
   }
 
+  .content-section {
+    border-left: 4px solid #ff953f;
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    h3:first-child {
+      margin-top: 0;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+  }
+
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  details {
+    margin-top: 0.5rem;
+
+    summary {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+
+      span {
+        width: fit-content;
+        background-color: #203b63;
+        border-radius: 0.5rem;
+        padding: 0.125rem 0.5rem;
+        color: #fff;
+        text-align: center;
+        font-size: 0.875rem;
+      }
+    }
   }
 
   /* Large desktops and high-resolution screens (1025px and up) */
@@ -33,6 +77,10 @@ import Sidebar from '../components/Sidebar.astro'
       padding-left: 7rem;
       padding-right: 7rem;
     }
+
+    h2 {
+      font-size: 1.65rem;
+    }
   }
 </style>
 
@@ -40,8 +88,77 @@ import Sidebar from '../components/Sidebar.astro'
   <div class="container">
     <Sidebar />
     <div class="content">
-      <h2>Zusammenfassung</h2>
-      <p>Ich bin Full-Stack-Entwickler mit Fokus auf Webentwicklung. Aktuell studiere ich berufsbegleitend Informatik (mit Schwerpunkt IT-Sicherheit) an der Friedrich-Alexander-Universität in Erlangen.</p>
+        <h2>Zusammenfassung</h2>
+        <p style="margin-bottom: 4rem;">Ich bin Full-Stack-Entwickler mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben und setze auf saubere und skalierbare Architekturen. Dabei lege ich Wert auf performante Lösungen, einfache und moderne UI/UX sowie wartbaren Code.</p>
+        <!-- <p>Aktuell studiere ich berufsbegleitend Informatik (mit Schwerpunkt IT-Sicherheit) an der Friedrich-Alexander-Universität in Erlangen.</p> -->
+
+      <h2>Berufserfahrung</h2>
+      <div class="content-section">
+        <h3>Full-Stack Software-Entwickler</h3>
+        <b>10/2020 - 07/2025</b>
+        <p><i>Brainbirds GmbH, München</i></p>
+        <p>Full-Stack Entwickler zuständig für die gesamte Weblandschaft darunter Website, CMS, Trainer-Portal, Anbindung von Dritt-Anbietern sowie Dev-Ops Aufgaben.</p>
+
+        <details>
+          <summary>Tech Stack</summary>
+          <div>
+            <span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>Docker</span><span>TailwindCSS</span><span>Biome</span><span>Jest</span><span>Cypress</span><span>PostgreSQL</span><span>GraphQL</span>
+            <span>REST</span><span>Github Actions</span><span>Strapi</span><span>GCP Cloud Run</span><span>GCP App Engine</span><span>GCP Secret Manager</span><span>AWS Cloud Storage</span><span>AWS Route 53</span><span>Google Tag Manager</span><span>Figma</span>
+          </div>
+        </details>
+
+        <h3>Frontend Software-Entwickler</h3>
+        <b>04/2020 - 10/2020</b>
+        <p><i>Freiberuflich, München</i></p>
+        <p>Freiberufliche Tätigigkeit mit Fokus auf Webanwendungen, unter anderem bei der myposter GmbH</p>
+
+        <details>
+          <summary>Tech Stack</summary>
+          <div>
+            <span>Vue.js</span><span>Konva.js</span><span>JavaScript</span><span>SCSS</span><span>Jest</span><span>Cypress</span><span>Storybook</span>
+            <span>REST</span><span>Github Actions</span><span>DataDog</span><span>Figma</span><span>AWS CloudFront</span>
+          </div>
+        </details>
+
+        <h3>Junior Software-Entwickler</h3>
+        <b>09/2016 - 04/2020</b>
+        <p><i>Jochen Schweizer mydays Holding GmbH, München</i></p>
+        <p>Entwicklung des Webauftritts, danach Verantwortlichkeit für das Partnertool. Jeweils in einem cross-funktionalen Team.</p>
+
+        <details>
+          <summary>Tech Stack</summary>
+          <div>
+            <span>TypeScript</span><span>Node.js</span><span>Perl</span><span>Handlebars</span><span>React.js</span><span>jQuery</span><span>SCSS</span><span>Google Tag Manager</span><span>MySQL</span><span>Sequelize</span><span>Docker</span>
+            <span>REST</span><span>Figma</span><span>Jenkins</span><span>Optimizely</span><span>Grafana</span>
+          </div>
+        </details>
+      </div>
+
+      <h2>Ausbildung / Weiter&shy;bildung</h2>
+      <div class="content-section">
+        <h3>IT-Sicherheit (Berufs&shy;begleitend)</h3>
+        <b>10/2024 - laufend</b>
+        <p><i>Friedrich-Alexander-Universität, Erlangen</i></p>
+
+        <h3>Agile Methoden Seminar</h3>
+        <b>11/2020 - 11/2020</b>
+        <p><i>Brainbirds GmbH, München</i></p>
+
+        <h3>Fachinformatiker für Anwendungsentwicklung</h3>
+        <b>09/2016 - 02/2019</b>
+        <p><i>Jochen Schweizer Technology Solutions GmbH, München</i></p>
+      </div>
+
+      <h2>Sonstiges</h2>
+      <div class="content-section">
+        <h3>Freiwilliges Soziales Jahr</h3>
+        <b>07/2013 - 08/2014</b>
+        <p><i>Montessori-Schule, München</i></p>
+
+        <h3>Ehrenamtlicher Jugend&shy;trainer</h3>
+        <b>2018 - 2022</b>
+        <p><i>TSV Milbertshofen Handball, München</i></p>
+      </div>
     </div>
   </div>
 </Layout>
