@@ -9,6 +9,6 @@ COPY . .
 RUN pnpm build
 
 FROM nginx:stable-alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /app/dist /usr/share/nginx/html 
+# COPY nginx/nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
