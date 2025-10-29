@@ -1,5 +1,21 @@
+---
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'de' } = Astro.props;
+
+const isEnglish = lang === 'en';
+const locale = isEnglish ? 'en_US' : 'de_DE';
+const url = isEnglish ? 'https://ebelleon.de/en/' : 'https://ebelleon.de/';
+const description = isEnglish 
+  ? 'Full-Stack Software Developer from Munich with expertise in React, Next.js, Node.js and TypeScript. Specialized in test-driven development and scalable architectures.'
+  : 'Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.';
+const skipToContent = isEnglish ? 'Skip to main content' : 'Zum Hauptinhalt springen';
+---
+
 <!doctype html>
-<html lang="de">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -8,24 +24,27 @@
   
     <!-- SEO Meta Tags -->
     <title>Leon Ebel - Software Developer</title>
-    <meta name="description" content="Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.">
+    <meta name="description" content={description}>
     <meta name="author" content="Leon Ebel">
-    <link rel="canonical" href="https://ebelleon.de/">
+    <link rel="canonical" href={url}>
+    <link rel="alternate" hreflang="de" href="https://ebelleon.de/">
+    <link rel="alternate" hreflang="en" href="https://ebelleon.de/en/">
+    <link rel="alternate" hreflang="x-default" href="https://ebelleon.de/">
     <meta name="theme-color" content="#2C3E50">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ebelleon.de/">
+    <meta property="og:url" content={url}>
     <meta property="og:title" content="Leon Ebel - Software Developer">
-    <meta property="og:description" content="Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.">
+    <meta property="og:description" content={description}>
     <meta property="og:image" content="https://ebelleon.de/og-image.jpg">
-    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale" content={locale}>
   
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://ebelleon.de/">
+    <meta name="twitter:url" content={url}>
     <meta name="twitter:title" content="Leon Ebel - Software Developer">
-    <meta name="twitter:description" content="Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript.">
+    <meta name="twitter:description" content={description}>
     <meta name="twitter:image" content="https://ebelleon.de/og-image.jpg">
   
     <!-- Favicons -->
@@ -74,7 +93,7 @@
     </script>
 	</head>
 	<body>
-    <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+    <a href="#main-content" class="skip-to-content">{skipToContent}</a>
 		<slot />
 	</body>
 </html>
@@ -82,7 +101,7 @@
 <style is:global>
   @font-face {
     font-family: 'OpenSans';
-    src: url('../../public/fonts/OpenSans-Variable.ttf') format('truetype-variations');
+    src: url('/fonts/OpenSans-Variable.ttf') format('truetype-variations');
     font-weight: 300 800;
     font-style: normal;
     font-display: swap;
@@ -90,7 +109,7 @@
 
   @font-face {
     font-family: 'OpenSans';
-    src: url('../../public/fonts/OpenSans-Italic-Variable.ttf') format('truetype-variations');
+    src: url('/fonts/OpenSans-Italic-Variable.ttf') format('truetype-variations');
     font-weight: 300 800;
     font-style: italic;
     font-display: swap;

@@ -1,0 +1,198 @@
+---
+import Sidebar from '../../components/en/Sidebar.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    max-width: 1500px;
+    margin: auto;
+  }
+
+  .content {
+    color: #2C3E50;
+    padding: 2rem;
+  }
+
+  .summary {
+    margin-bottom: 3rem;
+  }
+
+  .content-section {
+    border-left: 4px solid #FF6B35;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    h3:first-child {
+      margin-top: 0;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .content-section:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  details {
+    margin-top: 0.5rem;
+
+    summary {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+
+      span {
+        width: fit-content;
+        background-color: #2C3E50;
+        border-radius: 0.5rem;
+        padding: 0.125rem 0.5rem;
+        color: #fff;
+        text-align: center;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  ul {
+    padding-inline-start: 2rem;
+  }
+
+  /* Large desktops and high-resolution screens (1025px and up) */
+  @media (min-width: 1025px) {
+    .container {
+      /* Desktop: Sidebar + Content */
+      grid-template-columns: 1fr 2fr;
+      box-shadow: 10px 0 20px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+  }
+</style>
+
+<Layout lang="en">
+  <div class="container">
+    <Sidebar />
+    <main id="main-content" class="content">
+        <h2>Summary</h2>
+        <p class="summary">I am a Full-Stack Developer with a focus on web development. I enjoy working in a test-driven manner and rely on clean and scalable architectures. I value performant solutions, simple and modern UI/UX, as well as maintainable code.</p>
+        <!-- <p>Currently, I am pursuing a part-time degree in Computer Science (with a focus on IT Security) at Friedrich-Alexander-University in Erlangen.</p> -->
+
+      <h2>Professional Experience</h2>
+      <div class="content-section">
+        <h3>Full-Stack Software Developer</h3>
+        <b>10/2020 - 07/2025</b>
+        <p><i>Brainbirds GmbH, Munich</i></p>
+        <ul>
+          <li>Full-stack development with React, Next.js, Node.js, and Remix.js</li>
+          <li>API development and integration (REST, GraphQL, third-party services)</li>
+          <li>Database administration and testing infrastructure (PostgreSQL, Cypress, end-to-end tests)</li>
+          <li>Development and maintenance of software architecture (AWS, Google Cloud Platform, Heroku)</li>
+          <li>CI/CD pipelines and DevOps processes (GitHub Actions, Docker)</li>
+        </ul>
+
+        <details aria-label="Tech Stack Details for Brainbirds Position">
+          <summary>Tech Stack</summary>
+          <div>
+            <span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>Docker</span><span>TailwindCSS</span><span>Biome</span><span>Jest</span><span>Cypress</span><span>PostgreSQL</span><span>GraphQL</span>
+            <span>REST</span><span>Github Actions</span><span>Strapi</span><span>GCP Cloud Run</span><span>GCP App Engine</span><span>GCP Secret Manager</span><span>AWS Cloud Storage</span><span>AWS Route 53</span><span>Google Tag Manager</span><span>Figma</span>
+          </div>
+        </details>
+
+        <h3>Frontend Software Developer</h3>
+        <b>04/2020 - 10/2020</b>
+        <p><i>myposter GmbH, Munich</i></p>
+        <ul>
+          <li>Frontend development with Vue.js, Konva.js, Storybook, SCSS, Cypress, and Jest</li>
+          <li>Implementation of a new product calendar configurator for quick creation of calendars on the myposter website</li>
+        </ul>
+
+        <details aria-label="Tech Stack Details for myposter Position">
+          <summary>Tech Stack</summary>
+          <div>
+            <span>Vue.js</span><span>Konva.js</span><span>JavaScript</span><span>SCSS</span><span>Jest</span><span>Cypress</span><span>Storybook</span>
+            <span>REST</span><span>Github Actions</span><span>DataDog</span><span>Figma</span><span>AWS CloudFront</span>
+          </div>
+        </details>
+
+        <h3>Junior Software Developer</h3>
+        <b>09/2016 - 04/2020</b>
+        <p><i>Jochen Schweizer mydays Holding GmbH, Munich</i></p>
+        <ul>
+          <li>Development of the web presence in Demandware (JavaScript)</li>
+          <li>Migration of the website from Demandware to React.js based on microservices</li>
+          <li>Responsibility for the partner portal (Perl, Moose, DBIx, Template Toolkit)</li>
+          <li>Technical contact person for the partner portal in cross-functional teams</li>
+        </ul>
+
+        <details>
+          <summary>Tech Stack</summary>
+          <div>
+            <span>TypeScript</span><span>Node.js</span><span>Perl</span><span>Handlebars</span><span>React.js</span><span>jQuery</span><span>SCSS</span><span>Google Tag Manager</span><span>MySQL</span><span>Sequelize</span><span>Docker</span>
+            <span>REST</span><span>Figma</span><span>Jenkins</span><span>Optimizely</span><span>Grafana</span>
+          </div>
+        </details>
+      </div>
+
+      <h2>Education</h2>
+      <div class="content-section">
+        <h3>Computer Science / IT Security (Part-time)</h3>
+        <b>10/2024 - ongoing</b>
+        <p><i>Friedrich-Alexander-University, Erlangen</i></p>
+
+        <h3>IT Specialist for Application Development</h3>
+        <b>09/2016 - 02/2019</b>
+        <p><i>Jochen Schweizer Technology Solutions GmbH, Munich</i></p>
+      </div>
+
+      <h2>Certificates</h2>
+      <div class="content-section">
+        <h3>Fundamentals of Classical Project Management</h3>
+        <b>12/2024</b>
+        <p><i>Brainbirds GmbH, Munich</i></p>
+
+        <h3>Agile Methods Seminar</h3>
+        <b>11/2020</b>
+        <p><i>Brainbirds GmbH, Munich</i></p>
+
+      </div>
+
+      <h2>Engagement</h2>
+      <div class="content-section">
+        <h3>Voluntary Social Year</h3>
+        <b>07/2013 - 08/2014</b>
+        <p><i>Montessori School, Munich</i></p>
+
+        <h3>Volunteer Youth Coach</h3>
+        <b>2018 - 2022</b>
+        <p><i>TSV Milbertshofen Handball, Munich</i></p>
+      </div>
+    </main>
+  </div>
+</Layout>

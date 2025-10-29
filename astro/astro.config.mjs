@@ -6,4 +6,11 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	site: "https://ebelleon.de",
 	integrations: [sitemap()],
+	i18n: {
+		defaultLocale: "de",
+		locales: ["de", "en"],
+		routing: {
+			prefixDefaultLocale: false
+		}
+	}
 });

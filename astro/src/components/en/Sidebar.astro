@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import ProfileImage from '../assets/profile.jpg';
+import ProfileImage from '../../assets/profile.jpg';
 ---
 
 <style>
@@ -30,7 +30,7 @@ import ProfileImage from '../assets/profile.jpg';
       &:hover {
         background-color: rgba(255, 255, 255, 0.1);
       }
- 
+  
       &.active {
         background-color: #FF6B35;
         font-weight: 600;
@@ -114,15 +114,15 @@ import ProfileImage from '../assets/profile.jpg';
 <div class="sidebar">
   <div class="content">
     <div class="language-switcher">
-      <a href="/" class="active" aria-label="Deutsche Version">DE</a>
+      <a href="/" aria-label="German version">DE</a>
       <span>|</span>
-      <a href="/en" aria-label="English version">EN</a>
+      <a href="/en" class="active" aria-label="English version">EN</a>
     </div>
     <div class="profile-container">
       <Image
         class="profile-image"
         src={ProfileImage}
-        alt="Profilbild von Leon Ebel"
+        alt="Profile picture of Leon Ebel"
         width={250}
         height={250}
         widths={[150, 200, 250, 300]}
@@ -136,33 +136,33 @@ import ProfileImage from '../assets/profile.jpg';
     <h1>Leon Ebel</h1>
     <strong class="job-title">Software Developer</strong>
     <div>
-      <span>München |</span>
-      <a href="mailto:kontakt@ebelleon.de" aria-label="E-Mail an Leon Ebel senden">E-Mail</a>
+      <span>Munich |</span>
+      <a href="mailto:kontakt@ebelleon.de" aria-label="Send email to Leon Ebel">E-Mail</a>
       <span>|</span>
-      <a href="https://www.github.com/eberureon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profil von Leon Ebel (öffnet in neuem Tab)">Github</a>
+      <a href="https://www.github.com/eberureon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Leon Ebel (opens in new tab)">Github</a>
       <span>|</span>
-      <a href="https://www.linkedin.com/in/ebelleon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil von Leon Ebel (öffnet in neuem Tab)">LinkedIn</a>
-      <span>| Verfügbar ab sofort</span>
+      <a href="https://www.linkedin.com/in/ebelleon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Leon Ebel (opens in new tab)">LinkedIn</a>
+      <span>| Available immediately</span>
     </div>
   </div>
 
   <div class="content">
-    <strong>Technische Expertise</strong>
+    <strong>Technical Expertise</strong>
     <hr />
-    <p><b>Programmiersprachen & Framekworks:</b> JavaScript / TypeScript, React, Next.js, Node.js, Java</p>
+    <p><b>Programming Languages & Frameworks:</b> JavaScript / TypeScript, React, Next.js, Node.js, Java</p>
     <p><b>Testing:</b> Test-Driven Development (TDD), Jest, Cypress, Playwright</p>
-    <p><b>Datenbanken & APIs:</b> SQL, REST, GraphQL, MongoDB, SQLite</p>
+    <p><b>Databases & APIs:</b> SQL, REST, GraphQL, MongoDB, SQLite</p>
     <p><b>DevOps & Infrastructure:</b> Unix, Docker, GCP, AWS</p>
     <p><b>User Interface (UI):</b> CSS, TailwindCSS, Sass, Figma</p>
-    <p><b>Entwicklungs Tools:</b> neovim, VSCode, Git, Github Actions</p>
-    <p><b>Projektmanagement & Workflows:</b> Scrum, Agile, Confluence, Jira, Linear</p>
+    <p><b>Development Tools:</b> neovim, VSCode, Git, Github Actions</p>
+    <p><b>Project Management & Workflows:</b> Scrum, Agile, Confluence, Jira, Linear</p>
 
   </div>
 
     <div class="content">
-      <strong>Weitere Informationen</strong>
+      <strong>Additional Information</strong>
       <hr />
-      <p><b>Sprachen:</b> Deutsch (Muttersprache), Englisch (verhandlungssicher)</p>
-      <p><b>Interessen:</b> Web-Entwicklung, IT-Sicherheit, Homeserver, Handball</p>
+      <p><b>Languages:</b> German (Native), English (Fluent)</p>
+      <p><b>Interests:</b> Web Development, IT Security, Home Server, Handball</p>
     </div>
 </div>
