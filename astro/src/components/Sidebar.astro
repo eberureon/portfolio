@@ -99,15 +99,15 @@ import ProfileImage from '../assets/profile.jpg';
       <Image
         class="profile-image"
         src={ProfileImage}
-        alt="Bild von Leon Ebel"
+        alt="Profilbild von Leon Ebel"
         width={250}
         height={250}
-        widths={[150, 200, 250]}
+        widths={[150, 200, 250, 300]}
         sizes="(max-width: 768px) 150px, (max-width: 1024px) 250px, 200px"
-        layout="constrained"
-        quality={80}
+        quality={85}
+        fetchpriority="high"
         format="webp"
-        loading="lazy"
+        decoding="async"
       />
     </div>
     <h1>Leon Ebel</h1>
@@ -129,7 +129,7 @@ import ProfileImage from '../assets/profile.jpg';
     <p><b>Programmiersprachen & Framekworks:</b> JavaScript / TypeScript, React, Next.js, Node.js, Java</p>
     <p><b>Testing:</b> Test-Driven Development (TDD), Jest, Cypress, Playwright</p>
     <p><b>Datenbanken & APIs:</b> SQL, REST, GraphQL, MongoDB, SQLite</p>
-    <p><b>DevOps & Infrastructure:</b> Docker, AWS, GCP, Unix</p>
+    <p><b>DevOps & Infrastructure:</b> Unix, Docker, GCP, AWS</p>
     <p><b>User Interface (UI):</b> CSS, TailwindCSS, Sass, Figma</p>
     <p><b>Entwicklungs Tools:</b> neovim, VSCode, Git, Github Actions</p>
     <p><b>Projektmanagement & Workflows:</b> Scrum, Agile, Confluence, Jira, Linear</p>
