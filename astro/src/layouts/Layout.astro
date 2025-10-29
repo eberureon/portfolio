@@ -20,21 +20,22 @@
 </html>
 
 <style is:global>
-  @font-face {
-    font-family: OpenSans;
-    src: url('/fonts/OpenSans-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+  /* Define all font faces */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./fonts/OpenSans-Variable.ttf') format('truetype-variations');
+  font-weight: 300 800; /* Full weight range */
+  font-style: normal;
+  font-display: swap;
+}
 
-  @font-face {
-    font-family: OpenSans;
-    src: url('/fonts/OpenSans-Bold.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./fonts/OpenSans-Italic-Variable.ttf') format('truetype-variations');
+  font-weight: 300 800; /* Full weight range */
+  font-style: italic;
+  font-display: swap;
+}
 
 	html,
 	body {
