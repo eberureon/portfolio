@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Sidebar from '../components/Sidebar.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <style>
@@ -15,6 +15,10 @@ import Sidebar from '../components/Sidebar.astro';
   .content {
     color: #2C3E50;
     padding: 2rem;
+  }
+
+  .summary {
+    margin-bottom: 3rem;
   }
 
   .content-section {
@@ -91,9 +95,9 @@ import Sidebar from '../components/Sidebar.astro';
 <Layout>
   <div class="container">
     <Sidebar />
-    <div class="content">
+    <main id="main-content" class="content">
         <h2>Zusammenfassung</h2>
-        <p style="margin-bottom: 3rem;">Ich bin Full-Stack-Entwickler mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben und setze auf saubere und skalierbare Architekturen. Dabei lege ich Wert auf performante Lösungen, einfache und moderne UI/UX sowie wartbaren Code.</p>
+        <p class="summary">Ich bin Full-Stack-Entwickler mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben und setze auf saubere und skalierbare Architekturen. Dabei lege ich Wert auf performante Lösungen, einfache und moderne UI/UX sowie wartbaren Code.</p>
         <!-- <p>Aktuell studiere ich berufsbegleitend Informatik (mit Schwerpunkt IT-Sicherheit) an der Friedrich-Alexander-Universität in Erlangen.</p> -->
 
       <h2>Berufserfahrung</h2>
@@ -109,7 +113,7 @@ import Sidebar from '../components/Sidebar.astro';
           <li>CI/CD-Pipelines und DevOps-Prozesse (GitHub Actions, Docker)</li>
         </ul>
 
-        <details>
+        <details aria-label="Tech Stack Details für Brainbirds Position">
           <summary>Tech Stack</summary>
           <div>
             <span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>Docker</span><span>TailwindCSS</span><span>Biome</span><span>Jest</span><span>Cypress</span><span>PostgreSQL</span><span>GraphQL</span>
@@ -125,7 +129,7 @@ import Sidebar from '../components/Sidebar.astro';
           <li>Umsetzung eines neuen Produkt Kalender Konfigurators, zur schnellen erstellung von Kalendern auf der myposter Website</li>
         </ul>
 
-        <details>
+        <details aria-label="Tech Stack Details für myposter Position">
           <summary>Tech Stack</summary>
           <div>
             <span>Vue.js</span><span>Konva.js</span><span>JavaScript</span><span>SCSS</span><span>Jest</span><span>Cypress</span><span>Storybook</span>
@@ -185,6 +189,6 @@ import Sidebar from '../components/Sidebar.astro';
         <b>2018 - 2022</b>
         <p><i>TSV Milbertshofen Handball, München</i></p>
       </div>
-    </div>
+    </main>
   </div>
 </Layout>

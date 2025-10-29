@@ -44,3 +44,12 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## 🚀 Next Steps (Optional Enhancements)
+
+1. Add Content Security Policy headers
+2. Implement i18n for English version
+3. Add dark mode support
+4. Create custom 404 page
+5. Add analytics (privacy-friendly)
+6. Consider adding a blog section
