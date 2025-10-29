@@ -4,16 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="telephone=no">
-    
+		<meta name="generator" content={Astro.generator} />
+  
     <!-- SEO Meta Tags -->
     <title>Leon Ebel - Software Developer</title>
     <meta name="description" content="Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.">
     <meta name="author" content="Leon Ebel">
     <link rel="canonical" href="https://ebelleon.de/">
-    
-    <!-- Theme Color -->
     <meta name="theme-color" content="#2C3E50">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ebelleon.de/">
@@ -21,14 +20,14 @@
     <meta property="og:description" content="Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.">
     <meta property="og:image" content="https://ebelleon.de/og-image.jpg">
     <meta property="og:locale" content="de_DE">
-    
+  
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://ebelleon.de/">
     <meta name="twitter:title" content="Leon Ebel - Software Developer">
     <meta name="twitter:description" content="Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript.">
     <meta name="twitter:image" content="https://ebelleon.de/og-image.jpg">
-    
+  
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -36,9 +35,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Leon Ebel" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    
-		<meta name="generator" content={Astro.generator} />
-    
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
@@ -83,6 +80,22 @@
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: 'OpenSans';
+    src: url('../../public/fonts/OpenSans-Variable.ttf') format('truetype-variations');
+    font-weight: 300 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'OpenSans';
+    src: url('../../public/fonts/OpenSans-Italic-Variable.ttf') format('truetype-variations');
+    font-weight: 300 800;
+    font-style: italic;
+    font-display: swap;
+  }
+
   /* Skip to content link for accessibility */
   .skip-to-content {
     position: absolute;
@@ -103,31 +116,14 @@
 
   /* Focus-visible styles for keyboard navigation */
   *:focus-visible {
-    outline: 3px solid #FF6B35;
-    outline-offset: 2px;
-  }
-
-  a:focus-visible {
     outline: 2px solid #FF6B35;
     outline-offset: 2px;
   }
 
-  /* Define all font faces */
-@font-face {
-  font-family: 'OpenSans';
-  src: url('/fonts/OpenSans-Variable.ttf') format('truetype-variations');
-  font-weight: 300 800; /* Full weight range */
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url('/fonts/OpenSans-Italic-Variable.ttf') format('truetype-variations');
-  font-weight: 300 800; /* Full weight range */
-  font-style: italic;
-  font-display: swap;
-}
+  a:focus-visible {
+    outline: 1px solid #FF6B35;
+    outline-offset: 2px;
+  }
 
 	html,
 	body {
