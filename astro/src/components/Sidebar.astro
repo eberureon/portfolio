@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import ProfileImage from '../assets/profile.jpg';
+---
+
 <style>
   * {
     color: #fff;
@@ -25,6 +30,16 @@
     text-transform: uppercase;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
+  }
+
+  .profile-image {
+    border-radius: 100%;
+    margin: 0 auto 1rem;
+
+    &:hover {
+      border-radius: 0.5rem;
+      transition: 0.3s;
+    }
   }
 
   strong {
@@ -63,6 +78,16 @@
 
 <div class="sidebar">
   <div class="content">
+    <Image
+      class="profile-image"
+      src={ProfileImage}
+      alt="Leon Ebel"
+      width={250}
+      height={250}
+      quality={80}
+      format="webp"
+      loading="lazy"
+    />
     <h1>Leon Ebel</h1>
     <strong class="job-title">Software Developer</strong>
     <div>
