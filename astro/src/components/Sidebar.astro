@@ -81,9 +81,11 @@ import ProfileImage from '../assets/profile.jpg';
       alt="Bild von Leon Ebel"
       width={200}
       height={200}
+      widths={[100, 150, 200]}
+      sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 200px"
       quality={80}
       format="webp"
-      loading="eager"
+      loading="lazy"
     />
     <h1>Leon Ebel</h1>
     <strong class="job-title">Software Developer</strong>
