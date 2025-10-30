@@ -1,99 +1,10 @@
 ---
-import Sidebar from '../../components/en/Sidebar.astro';
+import Sidebar from '../../components/sidebar/en/Sidebar.astro';
 import Layout from '../../layouts/Layout.astro';
 ---
 
 <style>
-  .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    max-width: 1500px;
-    margin: auto;
-  }
-
-  .content {
-    color: #2C3E50;
-    padding: 2rem;
-  }
-
-  .summary {
-    margin-bottom: 3rem;
-  }
-
-  .content-section {
-    border-left: 4px solid #FF6B35;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-
-    h3 {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    h3:first-child {
-      margin-top: 0;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-  }
-
-  .content-section:last-child {
-    margin-bottom: 0;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  details {
-    margin-top: 0.5rem;
-
-    summary {
-      cursor: pointer;
-      user-select: none;
-    }
-
-    div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-
-      span {
-        width: fit-content;
-        background-color: #2C3E50;
-        border-radius: 0.5rem;
-        padding: 0.125rem 0.5rem;
-        color: #fff;
-        text-align: center;
-        font-size: 0.875rem;
-      }
-    }
-  }
-
-  ul {
-    padding-inline-start: 2rem;
-  }
-
-  /* Large desktops and high-resolution screens (1025px and up) */
-  @media (min-width: 1025px) {
-    .container {
-      /* Desktop: Sidebar + Content */
-      grid-template-columns: 1fr 2fr;
-      box-shadow: 10px 0 20px -10px rgba(0, 0, 0, 0.1);
-    }
-
-    .content {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-
-    .content-section {
-      margin-bottom: 3rem;
-    }
-  }
+  @import '../index.css';
 </style>
 
 <Layout lang="en">
@@ -101,18 +12,24 @@ import Layout from '../../layouts/Layout.astro';
     <Sidebar />
     <main id="main-content" class="content">
         <h2>Summary</h2>
-        <p class="summary">I am a Full-Stack Developer with a focus on web development. I enjoy working in a test-driven manner and rely on clean and scalable architectures. I value performant solutions, simple and modern UI/UX, as well as maintainable code.</p>
-        <!-- <p>Currently, I am pursuing a part-time degree in Computer Science (with a focus on IT Security) at Friedrich-Alexander-University in Erlangen.</p> -->
+        <p class="summary">
+          For 6 years, I have been a passionate Full-Stack Developer with a focus on web development.
+          I enjoy working test-driven and rely on clean and scalable architectures.
+          In my free time, I play handball and have been studying Computer Science/IT Security part-time since October 2024.
+        </p>
 
       <h2>Professional Experience</h2>
       <div class="content-section">
         <h3>Full-Stack Software Developer</h3>
         <b>10&#8203;/2020 - 07/2025</b>
-        <p><i>Brainbirds GmbH, Munich</i></p>
+        <p><i><a href="https://www.brainbirds.com" target="_blank" rel="noopener noreferrer">Brainbirds GmbH</a>, Munich</i></p>
         <ul>
-          <li>Full-stack development with React, Next.js, Node.js, and Remix.js</li>
-          <li>API development and integration (REST, GraphQL, third-party services)</li>
-          <li>Database administration and testing infrastructure (PostgreSQL, Cypress, end-to-end tests)</li>
+          <li>
+            Full-stack development of a performant web application: reduced loading times by up to 40% and build times
+            by up to 25% using targeted caching, code splitting, and DNS configurations
+          </li>
+          <li>API development and integration</li>
+          <li>Database administration and testing infrastructure (PostgreSQL, Unit Tests, End-to-End Tests)</li>
           <li>Development and maintenance of software architecture (AWS, Google Cloud Platform, Heroku)</li>
           <li>CI/CD pipelines and DevOps processes (GitHub Actions, Docker)</li>
         </ul>
@@ -127,10 +44,11 @@ import Layout from '../../layouts/Layout.astro';
 
         <h3>Frontend Software Developer</h3>
         <b>04&#8203;/2020 - 10/2020</b>
-        <p><i>myposter GmbH, Munich</i></p>
+        <p><i><a href="https://www.myposter.de" target="_blank" rel="noopener noreferrer">myposter GmbH</a>, Munich</i></p>
         <ul>
-          <li>Frontend development with Vue.js, Konva.js, Storybook, SCSS, Cypress, and Jest</li>
-          <li>Implementation of a new product calendar configurator for quick creation of calendars on the myposter website</li>
+          <li>Frontend development of a new product calendar configurator</li>
+          <li>Continuous development of the myposter website</li>
+          <li>Quality assurance through unit and end-to-end tests</li>
         </ul>
 
         <details aria-label="Tech Stack Details for myposter Position">
@@ -143,10 +61,13 @@ import Layout from '../../layouts/Layout.astro';
 
         <h3>Junior Software Developer</h3>
         <b>09&#8203;/2016 - 04/2020</b>
-        <p><i>Jochen Schweizer mydays Holding GmbH, Munich</i></p>
+        <p><i><a href="https://www.jochen-schweizer.de" target="_blank" rel="noopener noreferrer">Jochen Schweizer mydays Holding GmbH</a>, Munich</i></p>
         <ul>
           <li>Development of the web presence in Demandware (JavaScript)</li>
-          <li>Migration of the website from Demandware to React.js based on microservices</li>
+          <li>
+            Migration of the website to microservices architecture with a 60% reduction in loading times through
+            lazy loading, image optimization, and progressive web app technologies
+          </li>
           <li>Responsibility for the partner portal (Perl, Moose, DBIx, Template Toolkit)</li>
           <li>Technical contact person for the partner portal in cross-functional teams</li>
         </ul>
@@ -163,7 +84,7 @@ import Layout from '../../layouts/Layout.astro';
       <h2>Education</h2>
       <div class="content-section">
         <h3>Computer Science / IT Security (Part-time)</h3>
-        <b>10/2024 - ongoing</b>
+        <b>10&#8203;/2024 - ongoing</b>
         <p><i>Friedrich-Alexander-University, Erlangen</i></p>
 
         <h3>IT Specialist for Application Development</h3>
@@ -176,10 +97,17 @@ import Layout from '../../layouts/Layout.astro';
         <h3>Fundamentals of Classical Project Management</h3>
         <b>12/2024</b>
         <p><i>Brainbirds GmbH, Munich</i></p>
+        <p>
+          Teaching classical project management fundamentals: project initiation, planning,
+          role definition, stakeholder management, risk management, and communication
+        </p>
 
         <h3>Agile Methods Seminar</h3>
         <b>11/2020</b>
         <p><i>Brainbirds GmbH, Munich</i></p>
+        <p>
+          Introduction to agile methodologies: Design Thinking, Business Model Generation, Lean Startup as well as Scrum and Kanban
+        </p>
 
       </div>
 
@@ -188,10 +116,20 @@ import Layout from '../../layouts/Layout.astro';
         <h3>Voluntary Social Year</h3>
         <b>07&#8203;/2013 - 08/2014</b>
         <p><i>Montessori School, Munich</i></p>
+        <p>
+          Care and support of seventh graders in an educational village.
+          Class assistance in various subjects as well as targeted English tutoring
+          in small groups of 2-3 students.
+        </p>
 
         <h3>Volunteer Youth Coach</h3>
         <b>2018 - 2022</b>
         <p><i>TSV Milbertshofen Handball, Munich</i></p>
+        <p>
+          Training and coaching of youth players (12-16 years).
+          Development of leadership skills, teamwork, and
+          communication skills through group leadership and conflict management.
+        </p>
       </div>
     </main>
   </div>

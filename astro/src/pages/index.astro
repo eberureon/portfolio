@@ -1,99 +1,10 @@
 ---
-import Sidebar from '../components/Sidebar.astro';
+import Sidebar from '../components/sidebar/Sidebar.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <style>
-  .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    max-width: 1500px;
-    margin: auto;
-  }
-
-  .content {
-    color: #2C3E50;
-    padding: 2rem;
-  }
-
-  .summary {
-    margin-bottom: 3rem;
-  }
-
-  .content-section {
-    border-left: 4px solid #FF6B35;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-
-    h3 {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    h3:first-child {
-      margin-top: 0;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-  }
-
-  .content-section:last-child {
-    margin-bottom: 0;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  details {
-    margin-top: 0.5rem;
-
-    summary {
-      cursor: pointer;
-      user-select: none;
-    }
-
-    div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-
-      span {
-        width: fit-content;
-        background-color: #2C3E50;
-        border-radius: 0.5rem;
-        padding: 0.125rem 0.5rem;
-        color: #fff;
-        text-align: center;
-        font-size: 0.875rem;
-      }
-    }
-  }
-
-  ul {
-    padding-inline-start: 2rem;
-  }
-
-  /* Large desktops and high-resolution screens (1025px and up) */
-  @media (min-width: 1025px) {
-    .container {
-      /* Desktop: Sidebar + Content */
-      grid-template-columns: 1fr 2fr;
-      box-shadow: 10px 0 20px -10px rgba(0, 0, 0, 0.1);
-    }
-
-    .content {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-
-    .content-section {
-      margin-bottom: 3rem;
-    }
-  }
+  @import './index.css';
 </style>
 
 <Layout>
@@ -101,18 +12,24 @@ import Layout from '../layouts/Layout.astro';
     <Sidebar />
     <main id="main-content" class="content">
         <h2>Zusammenfassung</h2>
-        <p class="summary">Ich bin Full-Stack-Entwickler mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben und setze auf saubere und skalierbare Architekturen. Dabei lege ich Wert auf performante Lösungen, einfache und moderne UI/UX sowie wartbaren Code.</p>
-        <!-- <p>Aktuell studiere ich berufsbegleitend Informatik (mit Schwerpunkt IT-Sicherheit) an der Friedrich-Alexander-Universität in Erlangen.</p> -->
+      <p class="summary">
+        Seit 6 Jahren bin ich leidenschaftlicher Full-Stack-Entwickler mit Fokus auf Webentwicklung.
+        Ich arbeite gerne testgetrieben und setze auf saubere und skalierbare Architekturen.
+        In meiner Freizeit spiele ich Handball und studiere seit Oktober 2024 berufsbegleitend Informatik/IT-Sicherheit.
+      <p>
 
       <h2>Berufserfahrung</h2>
       <div class="content-section">
         <h3>Full-Stack Software-Entwickler</h3>
         <b>10&#8203;/2020 - 07/2025</b>
-        <p><i>Brainbirds GmbH, München</i></p>
+        <p><i><a href="https://www.brainbirds.com" target="_blank" rel="noopener noreferrer">Brainbirds GmbH</a>, München</i></p>
         <ul>
-          <li>Full-Stack-Entwicklung mit React, Next.js, Node.js und Remix.js</li>
-          <li>API-Entwicklung und -Integration (REST, GraphQL, Drittanbieter-Services)</li>
-          <li>Datenbankadministration und Testing-Infrastruktur (PostgreSQL, Cypress, End-to-End-Tests)</li>
+          <li>
+            Full-Stack-Entwicklung einer performaten Webanwendung: reduzierte Ladenzeiten um bis zu 40% und Buildzeiten
+            um bis zu 25% mittels gezieltes Caching, Code-Splitting und DNS-Konfigurationen
+          </li>
+          <li>API-Entwicklung und -Integration</li>
+          <li>Datenbankadministration und Testing-Infrastruktur (PostgreSQL, Unit-Tests, End-to-End-Tests)</li>
           <li>Entwicklung und Pflege der Software-Architektur (AWS, Google Cloud Platform, Heroku)</li>
           <li>CI/CD-Pipelines und DevOps-Prozesse (GitHub Actions, Docker)</li>
         </ul>
@@ -127,10 +44,11 @@ import Layout from '../layouts/Layout.astro';
 
         <h3>Frontend Software-Entwickler</h3>
         <b>04&#8203;/2020 - 10/2020</b>
-        <p><i>myposter GmbH, München</i></p>
+        <p><i><a href="https://www.myposter.de" target="_blank" rel="noopener noreferrer">myposter GmbH</a>, München</i></p>
         <ul>
-          <li>Frontend-Entwicklung mit Vue.js, Konva.js, Storybook, SCSS sowie Cypress und Jest</li>
-          <li>Umsetzung eines neuen Produkt Kalender Konfigurators, zur schnellen Erstellung von Kalendern auf der myposter Website</li>
+          <li>Frontend-Entwicklung eines neuen Produkt Kalender Konfigurators</li>
+          <li>Kontinuierliche Weiterentwicklung der myposter Website</li>
+          <li>Qualitätssicherung durch Unit- und End-to-End Tests</li>
         </ul>
 
         <details aria-label="Tech Stack Details für myposter Position">
@@ -143,10 +61,13 @@ import Layout from '../layouts/Layout.astro';
 
         <h3>Junior Software-Entwickler</h3>
         <b>09&#8203;/2016 - 04/2020</b>
-        <p><i>Jochen Schweizer mydays Holding GmbH, München</i></p>
+        <p><i><a href="https://www.jochen-schweizer.de" target="_blank" rel="noopener noreferrer">Jochen Schweizer mydays Holding GmbH</a>, München</i></p>
         <ul>
           <li>Entwicklung des Webauftritts in Demandware (JavaScript)</li>
-          <li>Migration der Website von Demandware zu React.js auf Basis von Microservices</li>
+          <li>
+            Migration der Website zu Microservices-Architektur mit 60% Reduktion der Ladezeiten durch
+            Lazy Loading, Image-Optimierung und Progressive Web App Technologien
+          </li>
           <li>Verantwortung für das Partnerportal (Perl, Moose, DBIx, Template Toolkit)</li>
           <li>Fachlicher Ansprechpartner für das Partnerportal in cross-funktionalen Teams</li>
         </ul>
@@ -162,7 +83,7 @@ import Layout from '../layouts/Layout.astro';
 
       <h2>Ausbildung</h2>
       <div class="content-section">
-        <h3>Informatik / IT-Sicherheit (Berufs&shy;begleitend)</h3>
+        <h3>Informatik/IT-Sicherheit (Berufs&shy;begleitend)</h3>
         <b>10&#8203;/2024 - laufend</b>
         <p><i>Friedrich-Alexander-Universität, Erlangen</i></p>
 
@@ -176,10 +97,18 @@ import Layout from '../layouts/Layout.astro';
         <h3>Grundlagen Klassisches Projektmanagement</h3>
         <b>12/2024</b>
         <p><i>Brainbirds GmbH, München</i></p>
+        <p>
+          Vermittlung klassischer Projektmanagement-Grundlagen: Projektinitiierung, Planung,
+          Rollendefinition, Stakeholder-Management, Risikomanagement und Kommunikation
+        </p>
 
         <h3>Agile Methoden Seminar</h3>
         <b>11/2020</b>
         <p><i>Brainbirds GmbH, München</i></p>
+        <p>
+          Einführung in agile Methodiken: Design Thinking, Business Model Generation,
+          Lean Startup sowie Scrum und Kanban
+        </p>
 
       </div>
 
@@ -188,10 +117,20 @@ import Layout from '../layouts/Layout.astro';
         <h3>Freiwilliges Soziales Jahr</h3>
         <b>07&#8203;/2013 - 08/2014</b>
         <p><i>Montessori-Schule, München</i></p>
+        <p>
+          Betreuung und Unterstützung von Siebtklässlern in einem Bildungsdorf.
+          Klassenassistenz in verschiedenen Fächern sowie gezielte Englisch-Nachhilfe
+          in Kleingruppen von 2-3 Schülern.
+        </p>
 
         <h3>Ehrenamtlicher Jugend&shy;trainer</h3>
         <b>2018 - 2022</b>
         <p><i>TSV Milbertshofen Handball, München</i></p>
+        <p>
+          Training und Betreuung von Jugendlichen (12-16 Jahre).
+          Entwicklung von Führungskompetenzen, Teamfähigkeit und
+          Kommunikationsstärke durch Gruppenleitung und Konfliktmanagement.
+        </p>
       </div>
     </main>
   </div>

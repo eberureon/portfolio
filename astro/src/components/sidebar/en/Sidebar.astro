@@ -1,115 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-import ProfileImage from '../../assets/profile.jpg';
+import ProfileImage from '../../../assets/profile.jpg';
 ---
 
 <style>
-  * {
-    color: #fff;
-  }
-
-  .sidebar {
-    background-color: #2C3E50;
-  }
-
-  .content {
-    padding: 2rem;
-  }
-
-  .content:first-child {
-    padding-top: 2rem;
-  }
-
-  .language-switcher {
-    a {
-      text-decoration: none;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-  
-      &.active {
-        color: #1A1A1A;
-        background-color: #FF6B35;
-        font-weight: 600;
-      }
-    }
-  }
-
-  h1 {
-    color: #FF6B35;
-    font-size: 1.75rem;
-    text-transform: uppercase;
-  }
-
-  .job-title {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-
-  .profile-container {
-    /* Mobile size */
-    width: 150px;
-    max-width: 100%;
-    margin: 1rem auto;
-  }
-
-  .profile-image {
-    border-radius: 100%;
-    margin: 0 auto;
-    transition: border-radius 0.3s ease-in-out;
-    width: 100%;
-    height: auto;
-
-    &:hover {
-      border-radius: 0.5rem;
-    }
-  }
-
-  strong {
-    display: inline-block;
-    font-size: 1.5rem;
-  }
-
-  hr {
-    margin: 0.5rem auto;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-
-  @media (min-width: 769px) {
-    .profile-container {
-      width: 250px;
-    }
-  }
-
-  /* Large desktops and high-resolution screens (1025px and up) */
-  @media (min-width: 1025px) {
-    .sidebar {
-      min-height: 100lvh;
-    }
-
-    .content {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-
-    .content:last-child {
-      padding-bottom: 0;
-    }
-
-    .profile-image {
-      width: 200px;
-    }
-  }
+  @import '../index.css';
 </style>
 
 <div class="sidebar">
@@ -141,7 +36,7 @@ import ProfileImage from '../../assets/profile.jpg';
       <span>Munich |</span>
       <a href="mailto:kontakt@ebelleon.de" aria-label="Send email to Leon Ebel">E-Mail</a>
       <span>|</span>
-      <a href="https://www.github.com/eberureon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Leon Ebel (opens in new tab)">Github</a>
+      <a href="https://www.github.com/eberureon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Leon Ebel (opens in new tab)">GitHub</a>
       <span>|</span>
       <a href="https://www.linkedin.com/in/ebelleon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Leon Ebel (opens in new tab)">LinkedIn</a>
       <span>| Available immediately</span>
