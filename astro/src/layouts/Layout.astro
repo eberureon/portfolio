@@ -135,9 +135,29 @@ const altText = isEnglish ? 'Profile picture of Leon Ebel' : 'Profilbild von Leo
   }
 
   /* Critical above-the-fold styles */
-  body {
+	html,
+	body {
+		width: 100%;
+		height: 100%;
     font-family: 'OpenSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
+	}
+
+  /* CSS Resets */
+  /* More-intuitive box-sizing model */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     color: #333;
     background-color: #fcfcfc;
   }
@@ -175,31 +195,6 @@ const altText = isEnglish ? 'Profile picture of Leon Ebel' : 'Profilbild von Leo
   a:focus-visible {
     outline: 1px solid #FF6B35;
     outline-offset: 2px;
-  }
-
-	html,
-	body {
-		width: 100%;
-		height: 100%;
-    font-family: OpenSans, Arial, sans-serif;
-	}
-
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* CSS Resets */
-  /* More-intuitive box-sizing model */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  /* Remove default margin and padding */
-  * {
-    margin: 0;
-    padding: 0;
   }
 
   h1, h2, h3, h4, h5, h6, strong {
