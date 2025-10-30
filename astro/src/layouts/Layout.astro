@@ -19,9 +19,14 @@ const altText = isEnglish ? 'Profile picture of Leon Ebel' : 'Profilbild von Leo
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="generator" content={Astro.generator} />
+    
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//linkedin.com">
   
     <!-- SEO Meta Tags -->
     <title>Leon Ebel - Software Developer</title>
@@ -32,6 +37,8 @@ const altText = isEnglish ? 'Profile picture of Leon Ebel' : 'Profilbild von Leo
     <link rel="alternate" hreflang="en" href="https://ebelleon.de/en/">
     <link rel="alternate" hreflang="x-default" href="https://ebelleon.de/">
     <meta name="theme-color" content="#2C3E50">
+    <meta name="color-scheme" content="light">
+    <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -58,6 +65,14 @@ const altText = isEnglish ? 'Profile picture of Leon Ebel' : 'Profilbild von Leo
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Leon Ebel" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- Font Preloads for Critical Performance -->
+    <link rel="preload" href="/fonts/OpenSans-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/OpenSans-Italic-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://github.com" crossorigin>
+    <link rel="preconnect" href="https://linkedin.com" crossorigin>
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -117,6 +132,20 @@ const altText = isEnglish ? 'Profile picture of Leon Ebel' : 'Profilbild von Leo
     font-weight: 300 800;
     font-style: italic;
     font-display: swap;
+  }
+
+  /* Critical above-the-fold styles */
+  body {
+    font-family: 'OpenSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcfcfc;
+  }
+
+  /* Prevent layout shift */
+  img {
+    height: auto;
+    max-width: 100%;
   }
 
   /* Skip to content link for accessibility */
