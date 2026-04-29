@@ -1,155 +1,290 @@
 ---
-import Sidebar from '../components/sidebar/Sidebar.astro';
-import Layout from '../layouts/Layout.astro';
+import Sidebar from "../components/sidebar/Sidebar.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <style>
-  @import './index.css';
+    @import "./index.css";
 </style>
 
 <Layout>
-  <div class="container">
-    <Sidebar />
-    <main id="main-content" class="content">
-        <h2>Zusammenfassung</h2>
-      <p class="summary">
-        Seit 6 Jahren bin ich leidenschaftlicher Full-Stack-Entwickler mit Fokus auf Webentwicklung.
-        Ich arbeite gerne testgetrieben und setze auf saubere und skalierbare Architekturen.
-        In meiner Freizeit spiele ich Handball und studiere seit Oktober 2024 berufsbegleitend Informatik/IT-Sicherheit.
-      <p>
+    <div class="container">
+        <Sidebar />
+        <main id="main-content" class="content">
+            <h2>Zusammenfassung</h2>
+            <p class="summary">
+                Seit 6 Jahren bin ich leidenschaftlicher Full-Stack-Entwickler
+                mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben
+                und setze auf saubere und skalierbare Architekturen. In meiner
+                Freizeit spiele ich Handball und studiere seit Oktober 2024
+                berufsbegleitend Informatik/IT-Sicherheit.
+                <p>
+                    <h2>Berufserfahrung</h2>
+                    <div class="content-section">
+                        <h3>Consultant</h3>
+                        <b>02/2026</b>
+                        <p>
+                          <i>
+                              <a
+                                href="https://www.valantic.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                             valantic Management Consulting GmbH
+                          </a>, München</i>
+                        </p>
+                        <ul>
+                            <li>
+                                Anpassung und Deployment eines
+                                Apache-Spark-Frameworks (Spark SQL, Scala)
+                            </li>
+                            <li>
+                                Eigenverantwortliche Konzeption von
+                                Datenpipelines mit Apache Kafka Streams
+                            </li>
+                            <li>
+                                Aufbereitung und Strukturierung von
+                                Datenpipelines für Process-Mining-Analysen
+                            </li>
+                            <li>
+                                Extraktion von Rohdaten aus SAP-Systemen mittels
+                                RFC-Modulen
+                            </li>
+                            <li>
+                                Datenmodellierung für Process-Mining-Analysen
+                                von SAP-ECC-Daten mit den Schwerpunkten
+                                Purchase-to-Pay, Accounts Payable und
+                                Order-to-Cash
+                            </li>
+                        </ul>
 
-      <h2>Berufserfahrung</h2>
-      <div class="content-section">
-        <!-- <h3>Consultant</h3> -->
-        <!-- <b>02/2026</b> -->
-        <!-- <p><i><a href="https://www.valantic.com" target="_blank" rel="noopener noreferrer">valantic Management Consulting GmbH</a>, München</i></p> -->
-        <!-- <ul> -->
-        <!--   <li>Anpassung und Deployment eines Apache-Spark-Frameworks (Spark SQL, Scala)</li> -->
-        <!--   <li>Eigenverantwortliche Konzeption von Datenpipelines mit Apache Kafka Streams</li> -->
-        <!--   <li>Aufbereitung und Strukturierung von Datenpipelines für Process-Mining-Analysen</li> -->
-        <!--   <li>Extraktion von Rohdaten aus SAP-Systemen mittels RFC-Modulen</li> -->
-        <!--   <li>Datenmodellierung für Process-Mining-Analysen von SAP-ECC-Daten mit den Schwerpunkten Purchase-to-Pay, Accounts Payable und Order-to-Cash</li> -->
-        <!-- </ul> -->
+                        <details
+                            aria-label="Technologien für valantic Position"
+                        >
+                            <summary>Technologien</summary>
+                            <div>
+            <span>AWS</span><span>SAP Signavio</span><span>Celonis</span><span>SQL</span><span>Scala</span><span>Excel</span>
+                            </div>
+                        </details>
 
-        <!-- <details aria-label="Technologien für valantic Position"> -->
-        <!--   <summary>Technologien</summary> -->
-        <!--   <div> -->
-        <!--     <span>AWS</span><span>SAP Signavio</span><span>Celonis</span><span>SQL</span><span>Scala</span> -->
-        <!--   </div> -->
-        <!-- </details> -->
+                        <h3>Full-Stack Software-Entwickler</h3>
+                        <b>10&#8203;/2020 - 07/2025</b>
+                        <p>
+                            <i
+                                ><a
+                                    href="https://www.brainbirds.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Brainbirds GmbH</a
+                                >, München</i
+                            >
+                        </p>
+                        <ul>
+                            <li>
+                                Full-Stack-Entwicklung einer performanten
+                                Webanwendung: reduzierte Ladenzeiten um bis zu
+                                40 % und Buildzeiten um bis zu 25 % mittels
+                                gezieltem Caching, Code-Splitting und
+                                DNS-Konfigurationen
+                            </li>
+                            <li>API-Entwicklung und -Integration</li>
+                            <li>
+                                Datenbankadministration und
+                                Testing-Infrastruktur (PostgreSQL, Unit-Tests,
+                                End-to-End-Tests)
+                            </li>
+                            <li>
+                                Entwicklung und Pflege der Software-Architektur
+                                (AWS, Google Cloud Platform, Heroku)
+                            </li>
+                            <li>
+                                CI/CD-Pipelines und DevOps-Prozesse (GitHub
+                                Actions, Docker)
+                            </li>
+                        </ul>
 
-        <h3>Full-Stack Software-Entwickler</h3>
-        <b>10&#8203;/2020 - 07/2025</b>
-        <p><i><a href="https://www.brainbirds.com" target="_blank" rel="noopener noreferrer">Brainbirds GmbH</a>, München</i></p>
-        <ul>
-            <li>
-              Full-Stack-Entwicklung einer performanten Webanwendung: reduzierte Ladenzeiten um
-              bis zu 40 % und Buildzeiten um bis zu 25 % mittels gezieltem Caching, Code-Splitting und DNS-Konfigurationen
-            </li>
-            <li>API-Entwicklung und -Integration</li>
-            <li>Datenbankadministration und Testing-Infrastruktur (PostgreSQL, Unit-Tests, End-to-End-Tests)</li>
-          <li>Entwicklung und Pflege der Software-Architektur (AWS, Google Cloud Platform, Heroku)</li>
-          <li>CI/CD-Pipelines und DevOps-Prozesse (GitHub Actions, Docker)</li>
-        </ul>
+                        <details
+                            aria-label="Tech Stack Details für Brainbirds Position"
+                        >
+                            <summary>Tech Stack</summary>
+                            <div>
+                                <span>TypeScript</span><span>Next.js</span><span
+                                    >Node.js</span
+                                ><span>Docker</span><span>TailwindCSS</span
+                                ><span>Biome</span><span>Jest</span><span
+                                    >Cypress</span
+                                ><span>PostgreSQL</span><span>GraphQL</span>
+                                <span>REST</span><span>GitHub Actions</span
+                                ><span>Strapi</span><span>GCP Cloud Run</span
+                                ><span>GCP App Engine</span><span
+                                    >GCP Secret Manager</span
+                                ><span>AWS Cloud Storage</span><span
+                                    >AWS Route 53</span
+                                ><span>Google Tag Manager</span><span
+                                    >Figma</span
+                                >
+                            </div>
+                        </details>
 
-        <details aria-label="Tech Stack Details für Brainbirds Position">
-          <summary>Tech Stack</summary>
-          <div>
-            <span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>Docker</span><span>TailwindCSS</span><span>Biome</span><span>Jest</span><span>Cypress</span><span>PostgreSQL</span><span>GraphQL</span>
-            <span>REST</span><span>GitHub Actions</span><span>Strapi</span><span>GCP Cloud Run</span><span>GCP App Engine</span><span>GCP Secret Manager</span><span>AWS Cloud Storage</span><span>AWS Route 53</span><span>Google Tag Manager</span><span>Figma</span>
-          </div>
-        </details>
+                        <h3>Frontend Software-Entwickler</h3>
+                        <b>04&#8203;/2020 - 10/2020</b>
+                        <p>
+                            <i
+                                ><a
+                                    href="https://www.myposter.de"
+                                    target="_blank"
+                                    rel="noopener noreferrer">myposter GmbH</a
+                                >, München</i
+                            >
+                        </p>
+                        <ul>
+                            <li>
+                                Frontend-Entwicklung eines neuen
+                                Produkt-Kalender-Konfigurators
+                            </li>
+                            <li>
+                                Kontinuierliche Weiterentwicklung der myposter
+                                Website
+                            </li>
+                            <li>
+                                Qualitätssicherung durch Unit- und End-to-End
+                                Tests
+                            </li>
+                        </ul>
 
-        <h3>Frontend Software-Entwickler</h3>
-        <b>04&#8203;/2020 - 10/2020</b>
-        <p><i><a href="https://www.myposter.de" target="_blank" rel="noopener noreferrer">myposter GmbH</a>, München</i></p>
-        <ul>
-          <li>Frontend-Entwicklung eines neuen Produkt-Kalender-Konfigurators</li>
-          <li>Kontinuierliche Weiterentwicklung der myposter Website</li>
-          <li>Qualitätssicherung durch Unit- und End-to-End Tests</li>
-        </ul>
+                        <details
+                            aria-label="Tech Stack Details für myposter Position"
+                        >
+                            <summary>Tech Stack</summary>
+                            <div>
+                                <span>Vue.js</span><span>Konva.js</span><span
+                                    >JavaScript</span
+                                ><span>SCSS</span><span>Jest</span><span
+                                    >Cypress</span
+                                ><span>Storybook</span>
+                                <span>REST</span><span>GitHub Actions</span
+                                ><span>DataDog</span><span>Figma</span><span
+                                    >AWS CloudFront</span
+                                >
+                            </div>
+                        </details>
 
-        <details aria-label="Tech Stack Details für myposter Position">
-          <summary>Tech Stack</summary>
-          <div>
-            <span>Vue.js</span><span>Konva.js</span><span>JavaScript</span><span>SCSS</span><span>Jest</span><span>Cypress</span><span>Storybook</span>
-            <span>REST</span><span>GitHub Actions</span><span>DataDog</span><span>Figma</span><span>AWS CloudFront</span>
-          </div>
-        </details>
+                        <h3>Junior Software-Entwickler</h3>
+                        <b>09&#8203;/2016 - 04/2020</b>
+                        <p>
+                            <i
+                                ><a
+                                    href="https://www.jochen-schweizer.de"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Jochen Schweizer mydays Holding GmbH</a
+                                >, München</i
+                            >
+                        </p>
+                        <ul>
+                            <li>
+                                Entwicklung des Webauftritts in Demandware
+                                (JavaScript)
+                            </li>
+                            <li>
+                                Migration der Website zu
+                                Microservices-Architektur mit 60 % Reduktion der
+                                Ladezeiten durch Lazy Loading, Image-Optimierung
+                                und Progressive Web App (PWA) Technologien
+                            </li>
+                            <li>
+                                Verantwortung für das Partnerportal (Perl,
+                                Moose, DBIx, Template Toolkit)
+                            </li>
+                            <li>
+                                Fachlicher Ansprechpartner für das Partnerportal
+                                in cross-funktionalen Teams
+                            </li>
+                        </ul>
 
-        <h3>Junior Software-Entwickler</h3>
-        <b>09&#8203;/2016 - 04/2020</b>
-        <p><i><a href="https://www.jochen-schweizer.de" target="_blank" rel="noopener noreferrer">Jochen Schweizer mydays Holding GmbH</a>, München</i></p>
-        <ul>
-          <li>Entwicklung des Webauftritts in Demandware (JavaScript)</li>
-          <li>
-            Migration der Website zu Microservices-Architektur mit 60 % Reduktion der Ladezeiten durch
-            Lazy Loading, Image-Optimierung und Progressive Web App (PWA) Technologien
-          </li>
-          <li>Verantwortung für das Partnerportal (Perl, Moose, DBIx, Template Toolkit)</li>
-          <li>Fachlicher Ansprechpartner für das Partnerportal in cross-funktionalen Teams</li>
-        </ul>
+                        <details>
+                            <summary>Tech Stack</summary>
+                            <div>
+                                <span>TypeScript</span><span>Node.js</span><span
+                                    >Perl</span
+                                ><span>Handlebars</span><span>React.js</span
+                                ><span>jQuery</span><span>SCSS</span><span
+                                    >Google Tag Manager</span
+                                ><span>MySQL</span><span>Sequelize</span><span
+                                    >Docker</span
+                                >
+                                <span>REST</span><span>Figma</span><span
+                                    >Jenkins</span
+                                ><span>Optimizely</span><span>Grafana</span>
+                            </div>
+                        </details>
+                    </div>
 
-        <details>
-          <summary>Tech Stack</summary>
-          <div>
-            <span>TypeScript</span><span>Node.js</span><span>Perl</span><span>Handlebars</span><span>React.js</span><span>jQuery</span><span>SCSS</span><span>Google Tag Manager</span><span>MySQL</span><span>Sequelize</span><span>Docker</span>
-            <span>REST</span><span>Figma</span><span>Jenkins</span><span>Optimizely</span><span>Grafana</span>
-          </div>
-        </details>
-      </div>
+                    <h2>Ausbildung</h2>
+                    <div class="content-section">
+                        <h3>
+                            Informatik/IT-Sicherheit (Berufs&shy;begleitend)
+                        </h3>
+                        <b>10&#8203;/2024 - laufend</b>
+                        <p>
+                            <i>Friedrich-Alexander-Universität, Erlangen</i>
+                        </p>
 
-      <h2>Ausbildung</h2>
-      <div class="content-section">
-        <h3>Informatik/IT-Sicherheit (Berufs&shy;begleitend)</h3>
-        <b>10&#8203;/2024 - laufend</b>
-        <p><i>Friedrich-Alexander-Universität, Erlangen</i></p>
+                        <h3>Fachinformatiker für Anwendungsentwicklung</h3>
+                        <b>09&#8203;/2016 - 02/2019</b>
+                        <p>
+                            <i
+                                >Jochen Schweizer Technology Solutions GmbH,
+                                München</i
+                            >
+                        </p>
+                    </div>
 
-        <h3>Fachinformatiker für Anwendungsentwicklung</h3>
-        <b>09&#8203;/2016 - 02/2019</b>
-        <p><i>Jochen Schweizer Technology Solutions GmbH, München</i></p>
-      </div>
+                    <h2>Zertifikate</h2>
+                    <div class="content-section">
+                        <h3>Grundlagen Klassisches Projektmanagement</h3>
+                        <b>12/2024</b>
+                        <p><i>Brainbirds GmbH, München</i></p>
+                        <p>
+                            Vermittlung klassischer
+                            Projektmanagement-Grundlagen: Projektinitiierung,
+                            Planung, Rollendefinition, Stakeholder-Management,
+                            Risikomanagement und Kommunikation
+                        </p>
 
-      <h2>Zertifikate</h2>
-      <div class="content-section">
-        <h3>Grundlagen Klassisches Projektmanagement</h3>
-        <b>12/2024</b>
-        <p><i>Brainbirds GmbH, München</i></p>
-        <p>
-          Vermittlung klassischer Projektmanagement-Grundlagen: Projektinitiierung, Planung,
-          Rollendefinition, Stakeholder-Management, Risikomanagement und Kommunikation
-        </p>
+                        <h3>Agile Methoden Seminar</h3>
+                        <b>11/2020</b>
+                        <p><i>Brainbirds GmbH, München</i></p>
+                        <p>
+                            Einführung in agile Methoden: Design Thinking,
+                            Business Model Generation, Lean Startup sowie Scrum
+                            und Kanban
+                        </p>
+                    </div>
 
-        <h3>Agile Methoden Seminar</h3>
-        <b>11/2020</b>
-        <p><i>Brainbirds GmbH, München</i></p>
-        <p>
-          Einführung in agile Methoden: Design Thinking, Business Model Generation,
-          Lean Startup sowie Scrum und Kanban
-        </p>
+                    <h2>Engagement</h2>
+                    <div class="content-section">
+                        <h3>Freiwilliges Soziales Jahr</h3>
+                        <b>07&#8203;/2013 - 08/2014</b>
+                        <p><i>Montessori-Schule, München</i></p>
+                        <p>
+                            Betreuung und Unterstützung von Siebtklässlern in
+                            einem Bildungsdorf. Klassenassistenz in
+                            verschiedenen Fächern sowie gezielte
+                            Englisch-Nachhilfe in Kleingruppen von 2-3 Schülern.
+                        </p>
 
-      </div>
-
-      <h2>Engagement</h2>
-      <div class="content-section">
-        <h3>Freiwilliges Soziales Jahr</h3>
-        <b>07&#8203;/2013 - 08/2014</b>
-        <p><i>Montessori-Schule, München</i></p>
-        <p>
-          Betreuung und Unterstützung von Siebtklässlern in einem Bildungsdorf.
-          Klassenassistenz in verschiedenen Fächern sowie gezielte Englisch-Nachhilfe
-          in Kleingruppen von 2-3 Schülern.
-        </p>
-
-        <h3>Ehrenamtlicher Jugend&shy;trainer</h3>
-        <b>2018 - 2022</b>
-        <p><i>TSV Milbertshofen Handball, München</i></p>
-        <p>
-          Training und Betreuung von Jugendlichen (13-18 Jahre).
-          Entwicklung von Führungskompetenzen, Teamfähigkeit und
-          Kommunikationsstärke durch Gruppenleitung und Konfliktmanagement.
-        </p>
-      </div>
-    </main>
-  </div>
+                        <h3>Ehrenamtlicher Jugend&shy;trainer</h3>
+                        <b>2018 - 2022</b>
+                        <p><i>TSV Milbertshofen Handball, München</i></p>
+                        <p>
+                            Training und Betreuung von Jugendlichen (13-18
+                            Jahre). Entwicklung von Führungskompetenzen,
+                            Teamfähigkeit und Kommunikationsstärke durch
+                            Gruppenleitung und Konfliktmanagement.
+                        </p>
+                    </div>
+                </p>
+            </p>
+        </main>
+    </div>
 </Layout>
