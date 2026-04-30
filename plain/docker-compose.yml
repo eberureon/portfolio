@@ -1,4 +1,4 @@
-version: '3.6'
+version: "3.6"
 
 services:
   portfolio:
@@ -11,13 +11,13 @@ services:
     volumes:
       - data:/var/www/html:ro
     healthcheck:
-      test:  wget -q -t 1 --spider http://localhost || exit 1
+      test: wget -q -t 1 --spider http://localhost || exit 1
       interval: 5m
       timeout: 3s
     environment:
-      - VIRTUAL_HOST=ebelleon.de,www.ebelleon.de
-      - LETSENCRYPT_HOST=ebelleon.de,www.ebelleon.de
-      - LETSENCRYPT_EMAIL=ebel.leon@hotmail.com
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     networks:
       - default
       - nginx-proxy_default
