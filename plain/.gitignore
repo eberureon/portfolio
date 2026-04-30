@@ -8,6 +8,7 @@ jspm_packages
 .yarnclean
 .DS_Store
 .directory
+.serverless
 
 assets/style/css
 yarn-error.log
