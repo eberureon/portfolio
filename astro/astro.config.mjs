@@ -21,9 +21,9 @@ export default defineConfig({
 	},
 	build: {
 		// Enable CSS inlining for smaller files to reduce requests
-		inlineStylesheets: 'auto',
+		inlineStylesheets: "auto",
 		// Optimize assets
-		assets: '_astro'
+		assets: "_astro",
 	},
 	// For production builds
 	vite: {
