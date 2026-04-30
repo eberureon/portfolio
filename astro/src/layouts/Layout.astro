@@ -1,6 +1,6 @@
 ---
 interface Props {
-	lang?: string;
+  lang?: string;
 }
 
 const { lang = "de" } = Astro.props;
@@ -9,14 +9,14 @@ const isEnglish = lang === "en";
 const locale = isEnglish ? "en_US" : "de_DE";
 const url = isEnglish ? "https://ebelleon.de/en/" : "https://ebelleon.de/";
 const description = isEnglish
-	? "Full-Stack Software Developer from Munich with expertise in React, Next.js, Node.js and TypeScript. Specialized in test-driven development and scalable architectures."
-	: "Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.";
+  ? "Full-Stack Software Developer from Munich with expertise in React, Next.js, Node.js and TypeScript. Specialized in test-driven development and scalable architectures."
+  : "Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.";
 const skipToContent = isEnglish
-	? "Skip to main content"
-	: "Zum Hauptinhalt springen";
+  ? "Skip to main content"
+  : "Zum Hauptinhalt springen";
 const altText = isEnglish
-	? "Profile picture of Leon Ebel"
-	: "Profilbild von Leon Ebel";
+  ? "Profile picture of Leon Ebel"
+  : "Profilbild von Leon Ebel";
 ---
 
 <!doctype html>
