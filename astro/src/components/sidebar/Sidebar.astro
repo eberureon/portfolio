@@ -7,13 +7,13 @@ import ProfileImage from "../../assets/profile.jpg";
     @import "./index.css";
 </style>
 
-<aside class="sidebar">
+<aside class="sidebar" aria-label="Sidebar">
     <div class="content">
-        <div class="language-switcher">
-            <a href="/" class="active" aria-label="Deutsche Version">DE</a>
-            <span>|</span>
+        <nav class="language-switcher" aria-label="Sprachauswahl">
+            <a href="/" class="active" aria-label="Deutsche Version" aria-current="page">DE</a>
+            <span aria-hidden="true">|</span>
             <a href="/en" aria-label="English version">EN</a>
-        </div>
+        </nav>
         <div class="profile-container">
             <Image
                 class="profile-image"
@@ -31,13 +31,14 @@ import ProfileImage from "../../assets/profile.jpg";
         </div>
         <h1>Leon Ebel</h1>
         <strong class="job-title">Software Developer</strong>
-        <div aria-label="Kontakt und Social Links">
-            <span>München |</span>
+        <address aria-label="Kontakt und Social Links">
+            <span>München</span>
+            <span aria-hidden="true">|</span>
             <a
                 href="mailto:kontakt@ebelleon.de"
                 aria-label="E-Mail an Leon Ebel senden">E-Mail</a
             >
-            <span>|</span>
+            <span aria-hidden="true">|</span>
             <a
                 href="https://www.github.com/eberureon"
                 target="_blank"
@@ -45,7 +46,7 @@ import ProfileImage from "../../assets/profile.jpg";
                 aria-label="GitHub Profil von Leon Ebel (öffnet in neuem Tab)"
                 >GitHub</a
             >
-            <span>|</span>
+            <span aria-hidden="true">|</span>
             <a
                 href="https://www.linkedin.com/in/ebelleon"
                 target="_blank"
@@ -54,7 +55,7 @@ import ProfileImage from "../../assets/profile.jpg";
                 >LinkedIn</a
             >
             <!-- <span>| Verfügbar ab sofort</span> -->
-        </div>
+        </address>
     </div>
 
     <div class="content">

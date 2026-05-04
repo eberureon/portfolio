@@ -7,13 +7,13 @@ import ProfileImage from "../../../assets/profile.jpg";
   @import '../index.css';
 </style>
 
-<div class="sidebar">
+<aside class="sidebar" aria-label="Sidebar">
   <div class="content">
-    <div class="language-switcher">
+    <nav class="language-switcher" aria-label="Language selection">
       <a href="/" aria-label="German version">DE</a>
-      <span>|</span>
-      <a href="/en" class="active" aria-label="English version">EN</a>
-    </div>
+      <span aria-hidden="true">|</span>
+      <a href="/en" class="active" aria-label="English version" aria-current="page">EN</a>
+    </nav>
     <div class="profile-container">
       <Image
         class="profile-image"
@@ -32,15 +32,16 @@ import ProfileImage from "../../../assets/profile.jpg";
     </div>
     <h1>Leon Ebel</h1>
     <strong class="job-title">Software Developer</strong>
-    <div>
-      <span>Munich |</span>
+    <address aria-label="Contact and social links">
+      <span>Munich</span>
+      <span aria-hidden="true">|</span>
       <a href="mailto:kontakt@ebelleon.de" aria-label="Send email to Leon Ebel">E-Mail</a>
-      <span>|</span>
+      <span aria-hidden="true">|</span>
       <a href="https://www.github.com/eberureon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Leon Ebel (opens in new tab)">GitHub</a>
-      <span>|</span>
+      <span aria-hidden="true">|</span>
       <a href="https://www.linkedin.com/in/ebelleon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Leon Ebel (opens in new tab)">LinkedIn</a>
       <!-- <span>| Available immediately</span> -->
-    </div>
+    </address>
   </div>
 
   <div class="content">
@@ -62,4 +63,4 @@ import ProfileImage from "../../../assets/profile.jpg";
       <p><b>Languages:</b> German (Native), English (Business Fluent)</p>
       <p><b>Interests:</b> Web Development, IT Security, Home Server, Hobby Barista, Handball</p>
     </div>
-</div>
+</aside>
