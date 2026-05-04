@@ -14,22 +14,24 @@ import { jobs } from "../lib/content/jobs.ts";
     <div class="container">
         <Sidebar />
         <main id="main-content" class="content">
-          <h2>Zusammenfassung</h2>
-          <p class="summary" aria-label="Über mich">
-            Seit 6 Jahren bin ich leidenschaftlicher Full-Stack-Entwickler
-            mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben
-            und setze auf saubere und skalierbare Architekturen. In meiner
-            Freizeit spiele ich Handball und studiere seit Oktober 2024
-            berufsbegleitend Informatik/IT-Sicherheit.
-          </p>
+          <h2 id="summary-heading">Zusammenfassung</h2>
+          <section class="content-section" aria-labelledby="summary-heading">
+            <p class="summary">
+              Seit 6 Jahren bin ich leidenschaftlicher Full-Stack-Entwickler
+              mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben
+              und setze auf saubere und skalierbare Architekturen. In meiner
+              Freizeit spiele ich Handball und studiere seit Oktober 2024
+              berufsbegleitend Informatik/IT-Sicherheit.
+            </p>
+          </section>
 
-          <h2>Berufserfahrung</h2>
-          <section class="content-section" aria-label="Jobs">
+          <h2 id="jobs-heading">Berufserfahrung</h2>
+          <section class="content-section" aria-labelledby="jobs-heading">
             <Jobs jobs={jobs} />
           </section>
 
-          <h2>Ausbildung</h2>
-          <section class="content-section" aria-label="Beschreibung Ausbildungen">
+          <h2 id="education-heading">Ausbildung</h2>
+          <section class="content-section" aria-labelledby="education-heading">
             <Header
               title="Informatik/IT-Sicherheit (Berufs&shy;begleitend)"
               subTitle="10/2024 - laufend"
@@ -45,8 +47,8 @@ import { jobs } from "../lib/content/jobs.ts";
             />
           </section>
 
-          <h2>Zertifikate</h2>
-          <section class="content-section" aria-label="Beschreibung Zertifikate">
+          <h2 id="certificates-heading">Zertifikate</h2>
+          <section class="content-section" aria-labelledby="certificates-heading">
               <Header
                 title="Grundlagen Klassisches Projektmanagement"
                 subTitle="12/2024"
@@ -73,8 +75,8 @@ import { jobs } from "../lib/content/jobs.ts";
               </p>
           </section>
 
-          <h2>Engagement</h2>
-          <section class="content-section" aria-label="Beschreibung Engagements">
+          <h2 id="engagement-heading">Engagement</h2>
+          <section class="content-section" aria-labelledby="engagement-heading">
               <Header
                 title="Freiwilliges Soziales Jahr"
                 subTitle="07/2013 - 08/2014"

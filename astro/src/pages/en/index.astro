@@ -14,20 +14,22 @@ import { jobsEn } from "../../lib/content/jobs.ts";
   <div class="container">
     <Sidebar />
     <main id="main-content" class="content">
-        <h2>Summary</h2>
-        <p class="summary" aria-label="About me">
+      <h2 id="summary-heading">Summary</h2>
+      <section class="content-section" aria-labelledby="summary-heading">
+        <p class="summary">
           For 6 years, I have been a passionate Full-Stack Developer with a focus on web development.
           I enjoy working test-driven and rely on clean and scalable architectures.
           In my free time, I play handball and have been studying Computer Science/IT Security part-time since October 2024.
         </p>
+      </section>
 
-      <h2>Professional Experience</h2>
-      <section class="content-section" aria-label="Jobs">
+      <h2 id="jobs-heading">Professional Experience</h2>
+      <section class="content-section" aria-labelledby="jobs-heading">
         <Jobs jobs={jobsEn} />
       </section>
 
-      <h2>Education</h2>
-      <section class="content-section" aria-label="Description Education">
+      <h2 id="education-heading">Education</h2>
+      <section class="content-section" aria-labelledby="education-heading">
         <Header
           title="Computer Science / IT Security (Part-time)"
           subTitle="10/2024 - ongoing"
@@ -43,8 +45,8 @@ import { jobsEn } from "../../lib/content/jobs.ts";
         />
       </section>
 
-      <h2>Certificates</h2>
-      <section class="content-section" aria-label="Description Certificates">
+      <h2 id="certificates-heading">Certificates</h2>
+      <section class="content-section" aria-labelledby="certificates-heading">
         <Header
           title="Fundamentals of Classical Project Management"
           subTitle="12/2024"
@@ -67,8 +69,8 @@ import { jobsEn } from "../../lib/content/jobs.ts";
         </p>
       </section>
 
-      <h2>Engagement</h2>
-      <section class="content-section" aria-label="Description Engagement">
+      <h2 id="engagement-heading">Engagement</h2>
+      <section class="content-section" aria-labelledby="engagement-heading">
         <Header
           title="Voluntary Social Year"
           subTitle="07/2013 - 08/2014"
