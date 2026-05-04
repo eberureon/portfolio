@@ -15,7 +15,7 @@ import { jobs } from "../lib/content/jobs.ts";
         <Sidebar />
         <main id="main-content" class="content">
           <h2 id="summary-heading">Zusammenfassung</h2>
-          <section class="content-section" aria-labelledby="summary-heading">
+          <section aria-labelledby="summary-heading">
             <p class="summary">
               Seit 6 Jahren bin ich leidenschaftlicher Full-Stack-Entwickler
               mit Fokus auf Webentwicklung. Ich arbeite gerne testgetrieben
@@ -32,23 +32,28 @@ import { jobs } from "../lib/content/jobs.ts";
 
           <h2 id="education-heading">Ausbildung</h2>
           <section class="content-section" aria-labelledby="education-heading">
-            <Header
-              title="Informatik/IT-Sicherheit (Berufs&shy;begleitend)"
-              subTitle="10/2024 - laufend"
-              company="Friedrich-Alexander-Universität"
-              city="Erlangen"
-            />
+            <article>
+                <Header
+                  title="Informatik/IT-Sicherheit (Berufs&shy;begleitend)"
+                  subTitle="10/2024 - laufend"
+                  company="Friedrich-Alexander-Universität"
+                  city="Erlangen"
+                />
+            </article>
 
-            <Header
-              title="Fachinformatiker für Anwendungsentwicklung"
-              subTitle="09/2016 - 02/2019"
-              company="Jochen Schweizer Technology Solutions GmbH"
-              city="München"
-            />
+            <article>
+                <Header
+                  title="Fachinformatiker für Anwendungsentwicklung"
+                  subTitle="09/2016 - 02/2019"
+                  company="Jochen Schweizer Technology Solutions GmbH"
+                  city="München"
+                />
+            </article>
           </section>
 
           <h2 id="certificates-heading">Zertifikate</h2>
           <section class="content-section" aria-labelledby="certificates-heading">
+            <article>
               <Header
                 title="Grundlagen Klassisches Projektmanagement"
                 subTitle="12/2024"
@@ -61,7 +66,9 @@ import { jobs } from "../lib/content/jobs.ts";
                 Planung, Rollendefinition, Stakeholder-Management,
                 Risikomanagement und Kommunikation
               </p>
+            </article>
 
+            <article>
               <Header
                 title="Agile Methoden Seminar"
                 subTitle="11/2020"
@@ -73,10 +80,12 @@ import { jobs } from "../lib/content/jobs.ts";
                 Business Model Generation, Lean Startup sowie Scrum
                 und Kanban
               </p>
+            </article>
           </section>
 
           <h2 id="engagement-heading">Engagement</h2>
           <section class="content-section" aria-labelledby="engagement-heading">
+            <article>
               <Header
                 title="Freiwilliges Soziales Jahr"
                 subTitle="07/2013 - 08/2014"
@@ -89,7 +98,9 @@ import { jobs } from "../lib/content/jobs.ts";
                 verschiedenen Fächern sowie gezielte
                 Englisch-Nachhilfe in Kleingruppen von 2-3 Schülern.
               </p>
+            </article>
 
+            <article>
               <Header
                 title="Ehrenamtlicher Jugend&shy;trainer"
                 subTitle="2018 - 2022"
@@ -102,6 +113,7 @@ import { jobs } from "../lib/content/jobs.ts";
                 Teamfähigkeit und Kommunikationsstärke durch
                 Gruppenleitung und Konfliktmanagement.
               </p>
+            </article>
           </section>
         </main>
     </div>

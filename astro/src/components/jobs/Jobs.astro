@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { jobs } = Astro.props;
+const locale = Astro.currentLocale ?? "de";
 ---
 
 <style>
@@ -44,25 +45,30 @@ const { jobs } = Astro.props;
 <section id="jobs">
   {jobs.map((job) => {
   const { jobName, time, company, companyUrl, city, responsibilities, technologies } = job;
+  const isEn = locale === "en";
+  const technologiesLabel = isEn ? `Tech stack for ${company}` : `Tech Stak bei ${company}`;
+  const responsibilitiesLabel = isEn ? `Responsibilities at ${company}`: `Tätigkeiten bei ${company}`
 
     return (
-      <Header
-        title={jobName}
-        subTitle={time}
-        city={city}
-        company={company}
-        url={companyUrl}
-      />
-      <ul aria-label={`Tätigkeiten bei ${company}`}>
-        {responsibilities.map((responsibility: string) => <li>{responsibility}</li>)}
-      </ul>
+      <article>
+        <Header
+          title={jobName}
+          subTitle={time}
+          city={city}
+          company={company}
+          url={companyUrl}
+        />
+        <ul aria-label={responsibilitiesLabel}>
+          {responsibilities.map((responsibility: string) => <li>{responsibility}</li>)}
+        </ul>
 
-      <details aria-label={`Technologien für ${company} Position`}>
-        <summary>Tech Stack</summary>
-        <div class="technologies">
-          {technologies.map((technology) => <span>{technology}</span>)}
-        </div>
-      </details>
+        <details aria-label={technologiesLabel}>
+          <summary>Tech Stack</summary>
+          <div class="technologies" role="list">
+            {technologies.map((technology) => <span role="listitem">{technology}</span>)}
+          </div>
+        </details>
+      </article>
     )
   })}
 </section>

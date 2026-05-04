@@ -8,27 +8,31 @@ interface Props {
 }
 
 const { title, subTitle, company, city, url } = Astro.props;
+const locale = Astro.currentLocale;
+const isEn = locale === "en";
+const linkLabel = isEn
+  ? `${company} Website (opens in new tab)`
+  : `${company} Website (öffnet in neuem Tab)`;
 ---
 
 <style>
-h3 {
-  font-size: 1.25rem;
-  margin-top: 1.5rem;
-}
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
 
-a {
-  color: #2c3e50;
-}
+  a {
+    color: #2c3e50;
+  }
 </style>
 
 <h3>{title}</h3>
-<b>{subTitle}</b>
+<p><strong>{subTitle}</strong></p>
 <p>
   <i>
     {url ?
-      <><a href={url} target="_blank" rel="noopener noreferrer">{company}</a>, {city}</>
+      <><a href={url} target="_blank" rel="noopener noreferrer" aria-label={linkLabel}>{company}</a>, {city}</>
     : <>{company}, {city}</>
     }
   </i>
 </p>
-

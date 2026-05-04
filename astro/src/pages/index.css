@@ -25,10 +25,12 @@ h2 {
   padding-left: 1.5rem;
   margin-bottom: 2rem;
 
-  h3:first-child {
-    margin-top: 0;
-    line-height: 1;
-    margin-bottom: 0.25rem;
+  article:first-child {
+    h3 {
+      margin-top: 0;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
   }
 }
 
