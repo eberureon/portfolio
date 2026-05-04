@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  subTitle: string;
+  company: string;
+  city: string;
+  url?: URL;
+}
+
+const { title, subTitle, company, city, url } = Astro.props;
+---
+
+<style>
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: #2c3e50;
+}
+</style>
+
+<h3>{title}</h3>
+<b>{subTitle}</b>
+<p>
+  <i>
+    {url ?
+      <><a href={url} target="_blank" rel="noopener noreferrer">{company}</a>, {city}</>
+    : <>{company}, {city}</>
+    }
+  </i>
+</p>
+
