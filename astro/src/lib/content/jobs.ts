@@ -68,12 +68,22 @@ const technologies: { [company: string]: string[] } = {
     "Optimizely",
     "Grafana",
   ],
+  fcbayern: ["Angular", "Figma", "TypeScript", "REST", "SCSS"],
 };
 
 export const jobsEn: Job[] = [
   {
+    jobName: "Software-Engineer Frontend & UI/UX",
+    time: "06/2026",
+    company: "FC Bayern München",
+    companyUrl: new URL("https://fcbayern.com"),
+    city: "Munich",
+    responsibilities: [],
+    technologies: technologies.fcbayern,
+  },
+  {
     jobName: "Consultant",
-    time: "02/2026",
+    time: "02/2026 - 04/2026",
     company: "valantic Management Consulting GmbH",
     companyUrl: new URL("https://www.valantic.com"),
     city: "Munich",
@@ -132,8 +142,17 @@ export const jobsEn: Job[] = [
 
 export const jobs: Job[] = [
   {
+    jobName: "Software-Engineer Frontend & UI/UX",
+    time: "06/2026",
+    company: "FC Bayern München",
+    companyUrl: new URL("https://fcbayern.com"),
+    city: "München",
+    responsibilities: [],
+    technologies: technologies.fcbayern,
+  },
+  {
     jobName: "Consultant",
-    time: "02/2026",
+    time: "02/2026 - 04/2026",
     company: "valantic Management Consulting GmbH",
     companyUrl: new URL("https://www.valantic.com"),
     city: "München",
