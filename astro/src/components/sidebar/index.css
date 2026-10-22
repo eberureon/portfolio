@@ -6,6 +6,11 @@
   background-color: #2c3e50;
 }
 
+/* Orange outline for contrast on the dark sidebar */
+:focus-visible {
+  outline-color: #ff6b35;
+}
+
 .content {
   padding: 2rem;
 }

@@ -7,7 +7,9 @@ const { lang = "de" } = Astro.props;
 
 const isEnglish = lang === "en";
 const locale = isEnglish ? "en_US" : "de_DE";
-const url = isEnglish ? "https://ebelleon.de/en/" : "https://ebelleon.de/";
+const url = isEnglish
+  ? "https://www.ebelleon.de/en/"
+  : "https://www.ebelleon.de/";
 const description = isEnglish
   ? "Full-Stack Software Developer from Munich with expertise in React, Next.js, Node.js and TypeScript. Specialized in test-driven development and scalable architectures."
   : "Full-Stack Software-Entwickler aus München mit Expertise in React, Next.js, Node.js und TypeScript. Spezialisiert auf testgetriebene Entwicklung und skalierbare Architekturen.";
@@ -39,9 +41,9 @@ const altText = isEnglish
     <meta name="description" content={description}>
     <meta name="author" content="Leon Ebel">
     <link rel="canonical" href={url}>
-    <link rel="alternate" hreflang="de" href="https://ebelleon.de/">
-    <link rel="alternate" hreflang="en" href="https://ebelleon.de/en/">
-    <link rel="alternate" hreflang="x-default" href="https://ebelleon.de/">
+    <link rel="alternate" hreflang="de" href="https://www.ebelleon.de/">
+    <link rel="alternate" hreflang="en" href="https://www.ebelleon.de/en/">
+    <link rel="alternate" hreflang="x-default" href="https://www.ebelleon.de/">
     <meta name="theme-color" content="#2C3E50">
     <meta name="color-scheme" content="light">
     <meta name="mobile-web-app-capable" content="yes">
@@ -51,7 +53,7 @@ const altText = isEnglish
     <meta property="og:url" content={url}>
     <meta property="og:title" content="Leon Ebel - Software Developer">
     <meta property="og:description" content={description}>
-    <meta property="og:image" content="https://ebelleon.de/og-image.jpg">
+    <meta property="og:image" content="https://www.ebelleon.de/og-image.jpg">
     <meta property="og:locale" content={locale}>
     <meta property="og:image:alt" content={altText} />
     <meta property="og:image:width" content="1200" />
@@ -62,7 +64,7 @@ const altText = isEnglish
     <meta name="twitter:url" content={url}>
     <meta name="twitter:title" content="Leon Ebel - Software Developer">
     <meta name="twitter:description" content={description}>
-    <meta name="twitter:image" content="https://ebelleon.de/og-image.jpg">
+    <meta name="twitter:image" content="https://www.ebelleon.de/og-image.jpg">
   
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
@@ -73,8 +75,7 @@ const altText = isEnglish
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
     <!-- Font Preloads for Critical Performance -->
-    <link rel="preload" href="/fonts/OpenSans-Variable.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/OpenSans-Italic-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/OpenSans-Variable.latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://github.com" crossorigin>
@@ -88,7 +89,7 @@ const altText = isEnglish
         "name": "Leon Ebel",
         "jobTitle": "Software Developer",
         "description": "Full-Stack Software-Entwickler mit Expertise in React, Next.js, Node.js und TypeScript",
-        "url": "https://ebelleon.de/",
+        "url": "https://www.ebelleon.de/",
         "email": "kontakt@ebelleon.de",
         "address": {
           "@type": "PostalAddress",
@@ -126,7 +127,7 @@ const altText = isEnglish
 <style is:global>
   @font-face {
     font-family: 'OpenSans';
-    src: url('/fonts/OpenSans-Variable.ttf') format('truetype-variations');
+    src: url('/fonts/OpenSans-Variable.latin.woff2') format('woff2');
     font-weight: 300 800;
     font-style: normal;
     font-display: swap;
@@ -134,7 +135,7 @@ const altText = isEnglish
 
   @font-face {
     font-family: 'OpenSans';
-    src: url('/fonts/OpenSans-Italic-Variable.ttf') format('truetype-variations');
+    src: url('/fonts/OpenSans-Italic-Variable.latin.woff2') format('woff2');
     font-weight: 300 800;
     font-style: italic;
     font-display: swap;
@@ -193,13 +194,9 @@ const altText = isEnglish
   }
 
   /* Focus-visible styles for keyboard navigation */
+  /* Dark outline for the light main content; the sidebar overrides it with orange */
   *:focus-visible {
-    outline: 2px solid #FF6B35;
-    outline-offset: 2px;
-  }
-
-  a:focus-visible {
-    outline: 1px solid #FF6B35;
+    outline: 2px solid #2C3E50;
     outline-offset: 2px;
   }
 

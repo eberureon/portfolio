@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ebelleon.de/sitemap-index.xml
+Sitemap: https://www.ebelleon.de/sitemap-index.xml
