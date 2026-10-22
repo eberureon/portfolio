@@ -1,5 +1,6 @@
 FROM node:lts-alpine AS builder
-RUN npm install -g pnpm
+# Pin pnpm to the version that writes pnpm-lock.yaml; newer majors reject it with --frozen-lockfile
+RUN npm install -g pnpm@10.12.4
 WORKDIR /app
 # Copy pnpm configuration files (if they exist)
 COPY .npmrc* pnpm-workspace.yaml* ./
