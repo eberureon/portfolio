@@ -35,12 +35,6 @@ export default defineConfig({
     build: {
       // Enable CSS code splitting
       cssCodeSplit: true,
-      // Optimize chunks
-      rollupOptions: {
-        output: {
-          manualChunks: undefined,
-        },
-      },
     },
   },
 });
